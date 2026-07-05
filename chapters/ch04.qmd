@@ -1,0 +1,68 @@
+---
+title: "Chapter 4 · Stochastic Discount Rates and Private-Market Risk Premia"
+---
+
+## Chapter at a glance
+
+The book's first full valuation engine. The chapter models discount rates as stochastic processes, changes measure by Girsanov, constructs exponential and factor SDFs with the Hansen–Jagannathan bound, enforces the premium-location discipline (each premium at exactly one address), values under regime-switching, and updates premia from sparse deal data by conjugate Bayesian analysis. The signature exercise is a hurdle-rate autopsy: enter a flat rate, and the engine reverse-engineers then replaces its implicit content.
+
+## Learning Outcome Statements
+
+**LOS 4.1** — *Model discount rates as stochastic processes, derive the Vasicek bond-price formula, and explain why long-horizon private cash flows make rate risk a first-order.*
+
+**LOS 4.2** — *Change measure by Girsanov’s theorem, interpret market prices of risk as drift wedges, and apply strict ¶//subjective-measure bookkeeping to private-market.*
+
+**LOS 4.3** — *Construct exponential and factor SDFs, and derive and apply the Hansen– Jagannathan bound as a discipline on any SDF used to mark private claims.*
+
+**LOS 4.4** — *Locate illiquidity, horizon, size, and complexity premia in exactly one of cash flows, SDF, or valuation operator, and detect double counting in a given valuation.*
+
+**LOS 4.5** — *Value cash-flow streams under regime-switching discount rates and prices of risk by solving the associated coupled ODE systems.*
+
+**LOS 4.6** — *Update premium parameters from sparse deal data by conjugate Bayesian analysis and propagate parameter uncertainty into posterior valuation distributions.*
+
+**LOS 4.7** — *Assemble and defend the liquidity-adjusted stochastic DCF operator: state its well-posedness and monotonicity, compute it by Monte Carlo, and validate it against.*
+
+
+## Laboratory (book §4.9)
+
+**Module:** Stochastic DCF Engine — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+
+The LDCF operator of Theorem 4.8 end to end. **E1** hurdle autopsy (enter 12%, read the decomposition and the distribution the point estimate was hiding); **E2** double-count demonstration (illiquidity as factor-in-M vs friction-in-operator, then both — the single most opinion-changing exercise in Part II); **E3** good-deal narrowing (sweep the Sharpe ceiling); **E4** learning curve (feed deal outcomes into the Bayesian panel).
+
+**Downloads:** [Python notebook](../downloads/ch04_laboratory.ipynb) · [Excel workbook](../downloads/MFAA_Ch04_Laboratory.xlsx) · [Slides](../downloads/MFAA_Ch04_Slides.pptx)
+
+## Exercises
+
+Solutions are distributed to instructors with the Instructor's Solutions Manual; they are not posted here.
+
+### Conceptual Problems
+
+**4.1** Rewrite the twelve-percent memo’s methodology sentence in the book’s architecture: list each implicit component, assign it an address per Table 4.1, and label every expectation with its measure per Remark 4.3.
+
+**4.2** A pension consultant reports that “private credit yields 9% against 6% for comparable public bonds, so the illiquidity premium is 3%.” Give three distinct reasons, grounded in Sections 4.5 and 4.7 and in Chapter 1’s smoothing discussion, why the subtraction does not identify a premium, and state what additional objects would need to be estimated.
+
+**4.3** Explain why the good-deal restriction is a statement about (¶) and not about any particular claim, and why it therefore narrows the valuation interval of every nonspanned claim simultaneously. What institutional knowledge does the choice of the ceiling ℎ encode?
+
+**4.4** The GP-skill row of Table 4.1 locates “alpha” in 𝐷 under a subjective measure rather than as a discount-rate reduction. Show by a two-period example that the two treatments give different values for a fund with back-loaded cash flows, and argue which difference is economically correct.
+
+### Mathematical Problems
+
+**4.5** Verify the conditional variance formula in the proof of Proposition 4.2.1 by direct ∫𝑇 computation of ( 𝑡 𝑟 𝑠 𝑠 | 𝑡 ) via the double integral of the OU covariance function, and confirm the yield-curve asymptote − log 𝑃(𝑡, 𝑇)/𝜏 → 𝑟¯ − 𝜎𝑟2 /(2𝑎 2 ) as 𝜏 → ∞.
+
+**4.6** (Duration.) For a deterministic expected cash-flow profile {𝑑 𝑘 } at horizons {𝜏𝑘 } (take the expected Í drawdown/distribution schedule of Exercise 2.10), define the factor duration 𝑘 𝑤 𝑘 𝐵(𝜏𝑘 ) with value weights 𝑤 𝑘 ; compute it for the Chapter 1 fund and compare with the duration of a public-equity index under the same rate model.
+
+**4.7** Derive the HJ bound with a riskless asset absent (bound on 𝜎(𝑀) over the set {e[𝑀 𝑅] = 𝑝} for gross the exponential SDF (4.2) over horizon √︁returns), and show √ Δ has 𝜎(𝑀)/e[𝑀] = 𝑒 ∥𝜆∥ 2 Δ − 1 ≈ ∥𝜆∥ Δ.
+
+**4.8** Extend Proposition 4.6 to (a) a terminal payoff 𝑔𝑖 collected at exit and (b) timedependent horizon 𝑇 < ∞, obtaining the linear ODE system 𝑣′ (𝑡) = (diag(𝑟 𝑖 + 𝜂𝑖 ) − Γ)𝑣(𝑡) − 𝛿 − diag(𝜂𝑖 )𝑔 with 𝑣(𝑇) = 0, and solve it by matrix exponentials. Prove the comparison result: increasing any 𝑟 𝑖 decreases every component of 𝑣.
+
+**4.9** Prove Proposition 4.7 (completion of squares), then extend to unknown 𝜎𝑦2 with a Normal–Inverse-Gamma prior, exhibiting the posterior-predictive 𝑡 distribution and the resulting heavier-tailed posterior valuation distribution.
+
+### Computational Problems
+
+**4.10** Implement the LDCF engine (any language) with the validation battery of Section 4.9; reproduce Figure 4.2 from the printed seed and parameters, and report the four-way valuation decomposition for the memo’s deal with Monte Carlo standard errors.
+
+**4.11** Run experiment E3: on a grid of (𝜆 𝑐 , 𝜆𝑟 , 𝜆 𝐿 ) satisfying ∥𝜆∥ ≤ ℎ, compute max/min valuations for the memo’s deal as ℎ varies; plot the good-deal interval against ℎ and mark the two desks of Chapter 3’s opening problem on it.
+
+**4.12** (Wedge estimation.) Simulate a “GP projection” dataset: outcomes generated under ¶, projections generated under a shifted measure with wedge 𝑤; estimate 𝑤 by regression of realized on projected log outcomes and by the Bayesian recursion, and study the sample size at which the wedge is distinguishable from zero at conventional posterior odds. Research Extensions
+
+**4.13** The good-deal ceiling ℎ is itself regime dependent: attainable Sharpe ratios widen in crises. Formulate a regime-modulated good-deal bound (ceiling ℎ(𝑍𝑡 )), characterize the resulting valuation interval dynamics for a long-horizon claim, and design an empirical strategy for calibrating ℎ(·) from traded-market data, discussing identification against the regime-dependent premia of Section 4.6.

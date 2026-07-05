@@ -1,0 +1,68 @@
+---
+title: "Chapter 2 · Probability, Stochastic Processes, and Financial States"
+---
+
+## Chapter at a glance
+
+The chapter builds the probabilistic substrate for everything that follows: filtered probability spaces and the usual conditions, conditional expectation as the primitive valuation operator, the martingale toolkit, the four drivers (diffusions, Poisson/compound-Poisson jumps, marked point processes, Markov chains), the cash-flow process D by decomposition (2.3), and the simulation schemes with their error rates. Its laboratory is the computational substrate on which every later valuation engine is a decoration.
+
+## Learning Outcome Statements
+
+**LOS 2.1** — *Construct filtered probability spaces satisfying the usual conditions and distinguish the full-information filtration from an investor’s observation filtration .*
+
+**LOS 2.2** — *Compute and interpret conditional expectations, and justify their use as least-squares forecasts and as the elementary building block of valuation operators.*
+
+**LOS 2.3** — *State the martingale, optional-sampling, and Doob–Meyer results used in the book’s no-arbitrage and optimal-stopping arguments, and verify the martingale.*
+
+**LOS 2.4** — *Define Brownian motion, Poisson and compound Poisson processes, marked point processes with stochastic intensity, and finite-state Markov chains, and select the.*
+
+**LOS 2.5** — *Formulate the cash-flow stream of a private-market claim as an adapted finite-variation process and decompose it into continuous and jump components.*
+
+**LOS 2.6** — *Assemble the canonical state vector of alternative-asset valuation and explain when the Markov assumption is, and is not, defensible.*
+
+**LOS 2.7** — *Implement Euler–Maruyama, exact, and thinning-based simulation schemes, state their error orders, and design reproducible simulation experiments.*
+
+
+## Laboratory (book §2.9)
+
+**Module:** Stochastic Process and Cash-Flow Simulator — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+
+Simulate the drivers, assemble undiscounted cash-flow paths, and make the two-filtration distinction visible by downsampling and smoothing simulated paths. **E1** scheme error (Euler vs exact; slopes ≈ ½ and ≈ 1); **E2** intensity shape (calibrate the capital-call age profile, Exercise 2.10); **E3** two filtrations (Exercise 2.11 — watch reported volatility fall and autocorrelation rise as α grows); **E4** tail of marks (lognormal vs Pareto).
+
+**Downloads:** [Python notebook](../downloads/ch02_laboratory.ipynb) · [Excel workbook](../downloads/MFAA_Ch02_Laboratory.xlsx) · [Slides](../downloads/MFAA_Ch02_Slides.pptx)
+
+## Exercises
+
+Solutions are distributed to instructors with the Instructor's Solutions Manual; they are not posted here.
+
+### Conceptual Problems
+
+**2.1** For each quantity, state whether it is (a) 𝑡 -measurable, (b) 𝑡 -measurable, or (c) neither, for an LP observing only quarterly lagged reports at time 𝑡 mid-quarter: the fund’s last reported NAV; the current latent value 𝑉𝑡 ; the LP’s own uncalled commitment; the general partner’s private knowledge of a pending exit; the time of the next capital call. Justify each answer in one sentence.
+
+**2.2** Let 𝜎 = inf{𝑡 : 𝐿 𝑡 = Liq} for the two-state liquidity chain. Explain why 𝜎 is an Fstopping time; give an information structure under which it fails to be a G-stopping time; and exhibit a G-stopping time that a seller could actually implement (e.g. “first time a solicited bid arrives”), commenting on how the two differ economically.
+
+**2.3** The risk committee of the opening problem proposes to fix the comparability √ problem by annualizing the private fund’s quarterly volatility with a 4 factor. Using the smoothing recursion (1.3) and the tower property, explain why this rescales but does not repair the bias, and name the object (Remark 2.3) a correct report would display.
+
+**2.4** Classify each modeling need with the appropriate driver from Section 2.5, with one sentence of justification: quarterly management-fee outflows; a toll road’s daily revenue; a covenant breach; a music catalogue’s streaming income; the announcement of a take-private of a portfolio company; the market’s shift from a high- to a low-deal-flow environment.
+
+### Mathematical Problems
+
+**2.5** Prove properties (i)–(iii) of conditional expectation in Section 2.3 from the defining property (2.1), and deduce Jensen’s inequality for finitely supported convex 𝜑. b𝑛 = 𝛼𝑉 b𝑛−1 + (1 − 𝛼)𝑉𝑡𝑛 + 𝜀 𝑛
+
+**2.6** (Markov by augmentation.) Reported values follow 𝑉 b𝑛 ) is not with (𝑉𝑡𝑛 ) Markov and (𝜀 𝑛 ) i.i.d. noise independent of 𝑉. Show that (𝑉 b Markov in general, but that the pair (𝑉𝑛 , 𝑉𝑡𝑛 ) is. Generalize to smoothing with 𝑝 lags, identifying the minimal augmented state. Í
+
+**2.7** Let 𝑁 be Poisson with intensity 𝜆 and 𝐽𝑡 = 𝑘 ≤ 𝑁𝑡 𝑍 𝑘 compound Poisson with e|𝑍 | < ∞. Show that 𝐽𝑡 − 𝜆𝑡 e[𝑍] is a martingale, compute (𝐽𝑡 ) when e[𝑍 2 ] < ∞, and verify both against Proposition 2.5.3 with suitable choices of 𝑔.
+
+**2.8** (Guided proof of ∫ 𝑡 Lemma 2.8.2.) Let 𝐴 be the accepted-point counting process. (a) Show that 𝐴𝑡 − 0 𝜆 𝑠 𝑠 is a martingale by computing e[ 𝐴𝑡 | 𝑡 − ] through conditioning on the dominating Poisson clock and the acceptance draw. (b) Conclude via the martingale characterization of intensity [1]that 𝐴 has intensity (𝜆 𝑡 ). (c) Explain where boundedness 𝜆 ≤ 𝜆¯ was used and what fails without it.
+
+### Computational Problems
+
+**2.9** Implement Algorithm 2.8.2 for the square-root cash-flow driver with both Euler– Maruyama and exact noncentral-𝜒2 transitions; reproduce experiment E1’s log–log error plot and report the fitted slopes with confidence intervals. State seed, 𝑀, and grid in a reproducibility block.
+
+**2.10** Calibrate the age profile ℎ(𝑡) = 𝑒 − 𝜃𝑡 {𝑡 ≤ 𝑇inv } of Example 2.5.3 so that expected cumulative calls reach 90% of commitment by year 4 (use Proposition 2.5.3); simulate 104 paths and compare the simulated drawdown fan against the closedform mean schedule.
+
+**2.11** Simulate the two-filtration experiment E3 programmatically: for 𝛼 ∈ {0, 0.2, . . . , 0.8} report the ratio of reported to latent return volatility and the lag-1 autocorrelation of reported returns, and compare with the closed-form expressions of Exercise 1.7. Research Extensions
+
+**2.12** Capital-call intensities plausibly depend on aggregate deal-flow regimes, inducing cross-fund clustering of calls in an LP’s portfolio. Formulate a common-regime MPP model for 𝐾 funds, propose an estimator of the regime-modulation from a panel of fund cash flows, and design a simulation study of the liquidity-atrisk consequences of ignoring the common factor. Relate to the commitment-risk analysis of Chapter 17.
+
+**2.13** The Markov Assumption 2.7 fails for long-memory deal-flow dynamics. Survey the evidence you would need to distinguish (i) a hidden finite-state regime chain from (ii) genuinely long-memory intensity, on realistic sample sizes of fund data; propose a statistical test, and discuss the valuation consequences of misclassification in light of the program of Chapter 15.

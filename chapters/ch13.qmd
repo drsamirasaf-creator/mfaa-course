@@ -1,0 +1,68 @@
+---
+title: "Chapter 13 · From Alternative Assets to Tradable Exposures: Allocation, Replication, and Optimal Switching"
+---
+
+## Chapter at a glance
+
+Alternative assets can be reframed as tradable exposures: each edge of the allocation graph — sell, overlay, wait, re-enter — carries a price, and the portfolio problem becomes one of optimal switching between them. The chapter builds the L2 replication that spans a private book with liquid proxies, the switching and rebalancing policies (with the cube-root band law), and the optimal-transport machinery that measures how far one distribution must move to become another. Its organizing display is the policy map: for each (signal, regime, urgency) state, the optimal instrument.
+
+## Learning Outcome Statements
+
+**LOS 13.1** — *Distinguish exposure from vehicle, and describe the public/private boundary as a state-dependent set rather than a fixed allocation line.*
+
+**LOS 13.2** — *Construct the 𝐿 2 -optimal liquid replication of a private exposure, decompose the switch into surrendered alpha, shed residual risk, and acquired basis risk, and prove.*
+
+**LOS 13.3** — *Read public-market-equivalent measures as replication statements, and correct replication betas for appraisal smoothing.*
+
+**LOS 13.4** — *Formulate public/private reallocation as a two-mode optimal switching problem with regime-dependent switching costs, state its variational-inequality system,.*
+
+**LOS 13.5** — *Model rebalancing under transaction costs as impulse control with no-trade bands, and state the band-width comparative statics in cost and volatility.*
+
+**LOS 13.6** — *Deploy the phase-transition analogy for liquidity regimes exactly as far as it is mathematics and no further.*
+
+**LOS 13.7** — *Use optimal transport distances to quantify how far a proxy portfolio’s outcome distribution sits from the private exposure it replaces, and bound the resulting.*
+
+
+## Laboratory (book §13.10)
+
+**Module:** Exposure Switchboard — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+
+The allocation cockpit: price every edge of the exposure graph and return the policy map. **E1** the CIO's quarter (produce the policy map and recommended sequencing for the opening problem, with realized-cost distributions vs naive policies); **E2** basis honesty (proxy betas on raw vs de-smoothed series — the overlay undersizing the raw estimates cause); **E3** hysteresis anatomy (the option value of the overlay edge as a function of the stress discount); **E4** tails have no twin (compute W₁ and the quantile map, and verify the transport budget of Proposition 13.8).
+
+**Downloads:** [Python notebook](../downloads/ch13_laboratory.ipynb) · [Excel workbook](../downloads/MFAA_Ch13_Laboratory.xlsx) · [Slides](../downloads/MFAA_Ch13_Slides.pptx)
+
+## Exercises
+
+Solutions are distributed to instructors with the Instructor's Solutions Manual; they are not posted here.
+
+### Conceptual Problems
+
+**13.1** Rewrite an allocation policy statement of the form “25% alternatives, rebalanced annually” as a policy on the Figure 13.1 graph: identify the exposure, the admissible vehicles, the implicit band, and the states in which the annual convention is most costly.
+
+**13.2** The overlay desk claims its short “converts private equity to cash with no sale.” Using Proposition 13.3, state exactly what is and is not converted, and which residual the institution still holds in a drawdown.
+
+**13.3** Audit the phase-transition analogy in a market commentary of your choosing against Section 13.7: mark each claim as free-boundary-exact, threshold-clusteringplausible, or equilibrium-claim-unmodeled.
+
+**13.4** Why does PME’s index-financing replication make it robust to the IRR manipulations of Proposition 8.6, and what timing choice can still move it? Connect to the subscription-line experiment of Chapter 8.
+
+### Mathematical Problems
+
+**13.5** Derive the cube-root law heuristically: for a Brownian exposure gap controlled to a band of half-width 𝑏 under proportional cost 𝜖 and quadratic flow loss 𝜆𝑥 2 , compute the stationary loss rate and the long-run cost rate as functions of 𝑏, minimize their sum, and obtain 𝑏 ∗ ∝ (𝜖 𝜎 2 /𝜆) 1/3 ; identify each step’s rigor gap against Bensoussan and Lions [1].
+
+**13.6** Complete the proof of Proposition 13.5: (a) the perturbation estimate in (iii)— bound ∥Δ𝑐′ − Δ𝑐 ∥ ∞ via the contraction property of the median operator, and show the exit threshold is nonincreasing in 𝑐 𝑃𝐿 whenever the continuation expression 𝑚 is strictly increasing where the lower clamp binds; (b) extend (i)–(ii) to regimedependent flows 𝑓 𝑃 (𝑥, 𝑧) nondecreasing in 𝑥, and exhibit a non-monotone 𝑓 𝑃 for which the switch region is not a half-line; (c) construct a small example in which Δ𝑛 is non-monotone at an intermediate iterate, confirming that the double-obstacle argument at the fixed point cannot be replaced by naive induction.
+
+**13.7** Write out the smoothing argument completing Proposition 13.8: approximate {𝑥 > 𝑡} by ∫Lipschitz functions, pass to the limit in the duality bound, and conclude 𝑊1 ≥ |𝐹𝜇 − 𝐹𝜈 |.
+
+**13.8** Formalize PME as a functional of the cash-flow and index paths: express the Kaplan–Schoar numerator and denominator as stochastic integrals against the index numéraire, prove PME’s invariance to index leverage applied uniformly to both legs, and characterize the SDF selections under which PME > 1 implies positive value.
+
+**13.9** In the two-mode problem, add a third mode 𝑂 (overlay: flow 𝑥 − 𝑏 𝑂 for basis cost 𝑏 𝑂 , cheap transitions to and from 𝐿): prove that for 𝑏 𝑂 small and 𝑐 𝑃𝐿 (stress) large the optimal stress-regime policy never uses the 𝑃 → 𝐿 edge directly, and interpret as the overlay’s option value.
+
+### Computational Problems
+
+**13.10** Reproduce Figure 13.2 from the printed parameters; verify the monotonicity assertions of Proposition 13.5 numerically at every iteration, and report the band widths against 𝑐 𝑃𝐿 + 𝑐 𝐿 𝑃 .
+
+**13.11** Reproduce Figure 13.3; then regularize (Sinkhorn) at three temperatures and display convergence of the regularized plan to the quantile coupling.
+
+**13.12** Run E1 end to end and produce the CIO policy map; report the realized-cost distributions of the optimal, sell-now, and overlay-only policies over 1,000 simulated quarters. 210 13 From Alternative Assets to Tradable Exposures: Allocation, Replication, and Optimal Switching
+
+**13.13** Endogenize the discount: if many holders operate the threshold policies of Proposition 13.5, aggregate sales load on the states where thresholds cluster, and the secondary discount—exogenous in this chapter— becomes an equilibrium object coupling the Chapter 5 search market to the switching policies. Characterize the fixed point (policies optimal given the discount schedule; discounts clearing given policy-induced flow), establish conditions for amplification (steeper discounts near clustered thresholds), and design an empirical test using secondary-market volume and pricing around policy-band breach episodes.

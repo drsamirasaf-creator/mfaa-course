@@ -9,4 +9,19 @@ slide's claims trace to a chapter section or a manual LOS guide.
 | Chapter | Deck | Status |
 |---|---|---|
 | 1. Alternative Assets and the Limits of Classical Financial Engineering | [PPTX](downloads/MFAA_Ch01_Slides.pptx) | Available |
-| 2–17 | — | In production |
+| 2. Probability, Stochastic Processes, and Financial States | [PPTX](downloads/MFAA_Ch02_Slides.pptx) | Available |
+| 3. No-Arbitrage, State Prices, and Incomplete Markets | [PPTX](downloads/MFAA_Ch03_Slides.pptx) | Available |
+| 4. Stochastic Discount Rates and Private-Market Risk Premia | [PPTX](downloads/MFAA_Ch04_Slides.pptx) | Available |
+| 5. Illiquidity and Non-Tradability | [PPTX](downloads/MFAA_Ch05_Slides.pptx) | Available |
+| 6. Sparse Observation, NAV Smoothing, and Filtering | [PPTX](downloads/MFAA_Ch06_Slides.pptx) | Available |
+| 7. Nonlinear Valuation | [PPTX](downloads/MFAA_Ch07_Slides.pptx) | Available |
+| 8. Cash-Flow Modeling of Fund Structures | [PPTX](downloads/MFAA_Ch08_Slides.pptx) | Available |
+| 9. Buyout Valuation: The Stochastic LBO | [PPTX](downloads/MFAA_Ch09_Slides.pptx) | Available |
+| 10. Venture Capital: Power Laws & Security Design | [PPTX](downloads/MFAA_Ch10_Slides.pptx) | Available |
+| 11. Private Credit: Default, Recovery, Covenants | [PPTX](downloads/MFAA_Ch11_Slides.pptx) | Available |
+| 12. Real Assets: Real Estate and Infrastructure | [PPTX](downloads/MFAA_Ch12_Slides.pptx) | Available |
+| 13. From Alternative Assets to Tradable Exposures | [PPTX](downloads/MFAA_Ch13_Slides.pptx) | Available |
+| 14. Optimal Stopping and Stochastic Control | [PPTX](downloads/MFAA_Ch14_Slides.pptx) | Available |
+| 15. Rough and Non-Markovian Dynamics | [PPTX](downloads/MFAA_Ch15_Slides.pptx) | Available |
+| 16. Malliavin Calculus and Sensitivity Analysis | [PPTX](downloads/MFAA_Ch16_Slides.pptx) | Available |
+| 17. Robust Valuation and Portfolio Construction | [PPTX](downloads/MFAA_Ch17_Slides.pptx) | Available |

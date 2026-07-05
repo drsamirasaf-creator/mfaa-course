@@ -19,7 +19,22 @@ numbers.
 | Chapter | Notebook | Excel workbook |
 |---|---|---|
 | 1. Taxonomy · LDCF Sandbox | [ipynb](downloads/ch01_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch01_Laboratory.xlsx) |
-| 2–17 | — | In production |
+| 2. Stochastic Process & Cash-Flow Simulator | [ipynb](downloads/ch02_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch02_Laboratory.xlsx) |
+| 3. State Prices & Pricing Bounds | [ipynb](downloads/ch03_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch03_Laboratory.xlsx) |
+| 4. Stochastic DCF Engine | [ipynb](downloads/ch04_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch04_Laboratory.xlsx) |
+| 5. Liquidity Shock Simulator | [ipynb](downloads/ch05_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch05_Laboratory.xlsx) |
+| 6. NAV Unsmoothing & Filtering | [ipynb](downloads/ch06_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch06_Laboratory.xlsx) |
+| 7. Indifference Pricing Engine | [ipynb](downloads/ch07_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch07_Laboratory.xlsx) |
+| 8. Fund Cash-Flow Engine | [ipynb](downloads/ch08_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch08_Laboratory.xlsx) |
+| 9. LBO Valuation Engine | [ipynb](downloads/ch09_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch09_Laboratory.xlsx) |
+| 10. Venture Portfolio & Security Engine | [ipynb](downloads/ch10_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch10_Laboratory.xlsx) |
+| 11. Private Credit Engine | [ipynb](downloads/ch11_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch11_Laboratory.xlsx) |
+| 12. Real Asset Cash-Flow Engine | [ipynb](downloads/ch12_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch12_Laboratory.xlsx) |
+| 13. Exposure Switchboard | [ipynb](downloads/ch13_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch13_Laboratory.xlsx) |
+| 14. Optimal Exit Solver | [ipynb](downloads/ch14_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch14_Laboratory.xlsx) |
+| 15. Volterra & Signature Engines | [ipynb](downloads/ch15_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch15_Laboratory.xlsx) |
+| 16. Malliavin Sensitivity Engine | [ipynb](downloads/ch16_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch16_Laboratory.xlsx) |
+| 17. Portfolio Construction Suite | [ipynb](downloads/ch17_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch17_Laboratory.xlsx) |
 
 ## Reproducibility
 

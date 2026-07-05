@@ -1,0 +1,68 @@
+---
+title: "Chapter 16 · Malliavin Calculus and Sensitivity Analysis"
+---
+
+## Chapter at a glance
+
+Malliavin calculus turns the computation of Greeks from repeated re-simulation into a single weighted expectation: integration by parts moves the derivative off the payoff and onto a weight, giving unbiased sensitivities even for discontinuous payoffs. The chapter derives the weight and score estimators, establishes the RMSE-versus-N laws that separate them from bump estimators, and builds the Clark-Ocone hedging projection that decomposes a claim into its hedgeable and residual parts. Its organizing image is the risk committee's morning, industrialized: every Greek with an error bar and an estimator provenance.
+
+## Learning Outcome Statements
+
+**LOS 16.1** — *Explain why the payoff structures of alternative assets—waterfall kinks, digital events, random horizons—defeat naı̈ve finite-difference and pathwise Greeks,.*
+
+**LOS 16.2** — *Define the Malliavin derivative on cylinder functionals, state its closure, and prove the duality (integration by parts) relation that converts payoff differentiation into.*
+
+**LOS 16.3** — *State the Clark–Ocone representation and prove the incomplete-market corollary: projected Malliavin integrands are variance-optimal hedge ratios and the.*
+
+**LOS 16.4** — *Derive simulation weights (Fournié-type) for diffusive parameters, and score (likelihood-ratio) weights for intensity and chain parameters, knowing which.*
+
+**LOS 16.5** — *Exploit the envelope property of optimally stopped and switched values: first-order Greeks need no boundary derivatives.*
+
+**LOS 16.6** — *Implement the estimators with variance reduction (localization, controls) and read their convergence diagnostics.*
+
+**LOS 16.7** — *Connect sensitivity analysis back to the book’s operators: the hedgeable Greek is what Chapter 13’s overlay sizes, and the residual is what Chapter 7’s operators.*
+
+
+## Laboratory (book §16.8)
+
+**Module:** Malliavin Sensitivity Engine — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+
+A sensitivity layer over every engine: Greeks with error bars, estimator diagnostics, and the hedging projection. **E1** the committee's morning (rate duration and carry vega, bump vs weight at equal compute); **E2** kink stress (watch bump variance explode near a hurdle while the localized weight holds its error bars); **E3** hedge the fund (compute the Clark-Ocone projection φ*, hedge at monthly rebalancing, match the residual to the floor 0.0992); **E4** envelope theater (confirm the zero first-order effect of bumping an optimal boundary).
+
+**Downloads:** [Python notebook](../downloads/ch16_laboratory.ipynb) · [Excel workbook](../downloads/MFAA_Ch16_Laboratory.xlsx) · [Slides](../downloads/MFAA_Ch16_Slides.pptx)
+
+## Exercises
+
+Solutions are distributed to instructors with the Instructor's Solutions Manual; they are not posted here.
+
+### Conceptual Problems
+
+**16.1** For each payoff feature met in Part III—waterfall tiers, preferred conversion, covenant barrier, default indicator, optimal exit—state whether the pathwise estimator is unbiased, and if not, which entry of Table 16.1 repairs it.
+
+**16.2** Explain to the desk why halving the bump made the estimate worse, using Proposition 16.2’s two error terms and the position of their optimum.
+
+**16.3** Why is the projected Malliavin derivative the honest content of the phrase “our private book has a beta of 1.2”? What does the unprojected remainder correspond to on the Chapter 13 risk map?
+
+**16.4** The GP argues carry vega is “not a risk, since carry cannot be negative.” Disentangle the claim: whose risk, under which measure, and which Greek prices the LP–GP transfer per unit of underwriting volatility?
+
+### Mathematical Problems
+
+**16.5** Complete Proposition 16.5: write the mollification limit in full, and derive the GBM vega weight by differentiating the lognormal density in 𝜎; verify both against Black–Scholes.
+
+**16.6** Prove the interchange (differentiation under the integral) used for rate durations: state a dominating envelope for the master formula’s discount factor and verify it for the Chapter 4 Vasicek engine.
+
+**16.7** Sharpen Remark 16.2: prove the directional derivative formula for 𝑣(𝜃) = max 𝜏 ∈ T 𝐽 (𝜃, 𝜏) with finite T , exhibit non-differentiability at a tie, and give the a.e.-differentiability conclusion for monotone families.
+
+**16.8** Derive the chain score: for a two-state chain observed on [0, 𝑇], compute 𝜕𝑞𝑖 𝑗 loglikelihood and hence the weight; verify by differentiating the Proposition 4.6 closed form for a regime-dependent annuity.
+
+**16.9** Prove the switching-cost derivative claim: for theÍChapter 13 program with lump cost 𝑐 paid at each 𝑃 → 𝐿 switch, show 𝜕𝑐 𝑣 = −e[ 𝑘 𝑒 −𝜌𝜏𝑘 {switch 𝑘 is 𝑃 → 𝐿}] at parameters where the policy is unique, via the finite- horizon envelope argument.
+
+### Computational Problems
+
+**16.10** Reproduce the pipeline figure’s inset from the printed seed: digital payoff, bump versus weight, fitted RMSE slopes with bootstrap bands.
+
+**16.11** Implement the localized carry vega for the Chapter 8 waterfall on Chapter 9 paths; report the variance reduction from localization as a function of window width.
+
+**16.12** Run E3’s hedging loop at weekly, monthly, and quarterly rebalancing; decompose the realized residual into the Proposition 16.4 floor and the discretization excess.
+
+**16.13** Extend the sensitivity engine to the event layer’s mark distributions with Malliavin calculus for jump processes [2]: construct weight estimators for waterfall sensitivities to the exit-mark law, compare their variance against the Beta scores of Table 16.1 across payoff kink severity, and characterize—in the spirit of Chapters 6 and 15—which of these Greeks remain estimable when only smoothed, irregularly observed data are available. 254 16 Malliavin Calculus and Sensitivity Analysis

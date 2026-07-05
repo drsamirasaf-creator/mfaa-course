@@ -1,0 +1,68 @@
+---
+title: "Chapter 7 · Nonlinear Valuation: Indifference Prices, Good-Deal Bounds, and Convex Risk Measures"
+---
+
+## Chapter at a glance
+
+When a claim is unspanned, linear pricing fails and holder-relevant valuation must become nonlinear. The chapter develops indifference pricing under exponential utility, good-deal bounds that cap the attainable Sharpe ratio, convex risk measures with their dual representations, and the dynamic BSDE formulation. Its organizing image is the operator ladder: Chapter 3's no-arbitrage ambiguity, narrowed by declared assumptions into ever-tighter nested intervals.
+
+## Learning Outcome Statements
+
+**LOS 7.1** — *Explain why holder-relevant valuation of unspanned claims must violate additivity, and state the axioms a defensible nonlinear valuation operator should retain.*
+
+**LOS 7.2** — *Compute certainty equivalents under exponential utility and derive the exponential–Gaussian indifference price in closed form, isolating the residual-risk.*
+
+**LOS 7.3** — *Prove the structural properties of indifference prices: buyer–seller ordering, containment in the no-arbitrage interval, volume monotonicity, and span consistency.*
+
+**LOS 7.4** — *Construct good-deal bounds as coherent, measure-set-based operators and position them between no-arbitrage bounds and preference-based prices.*
+
+**LOS 7.5** — *State the axioms of convex and coherent risk measures, prove the robust representation on finite state spaces, and recognize the entropic measure as the riskmeasure form of exponential indifference.*
+
+**LOS 7.6** — *Formulate dynamically consistent nonlinear valuation through BSDEs and 𝑔-expectations, and identify the drivers corresponding to linear, ambiguity-penalized,.*
+
+**LOS 7.7** — *Size an unspanned position by equating marginal indifference value to price, and defend the resulting quantity-dependent bid to an investment committee.*
+
+
+## Laboratory (book §7.9)
+
+**Module:** Indifference Pricing Engine — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+
+Price unspanned claims with the full nonlinear toolkit side by side. The organizing display is the operator ladder: for one claim, the no-arbitrage interval, the good-deal interval inside it, the [p_b, p_s] indifference pair inside that, and the Davis point they straddle. **E1** hedgeable-fraction sweep (watch the indifference band collapse onto replication); the buyer–seller gap is a variance bill γσ_e²q²/R; only the residual variance is charged.
+
+**Downloads:** [Python notebook](../downloads/ch07_laboratory.ipynb) · [Excel workbook](../downloads/MFAA_Ch07_Laboratory.xlsx) · [Slides](../downloads/MFAA_Ch07_Slides.pptx)
+
+## Exercises
+
+Solutions are distributed to instructors with the Instructor's Solutions Manual; they are not posted here.
+
+### Conceptual Problems
+
+**7.1** Write the one-paragraph memo reconciling the CIO and the risk head, using only the concepts marginal price, demand curve, and residual variance—no formulas—and state what single number each officer was implicitly quoting.
+
+**7.2** Audit these practice rules against the chapter’s three axioms (monotonicity, span consistency, cash translation): “NAV minus 20%”; “discount rate plus 300bp for 118 7 Nonlinear Valuation: Indifference Prices, Good-Deal Bounds, and Convex Risk Measures illiquidity”; “lower of cost and NAV”; “expected value under our house measure.” Identify each failure and its consequence with a two-state example.
+
+**7.3** Explain why the buyer–seller gap of Proposition 7.4 is a preference-side bid–ask, distinct from the search-side discount of Chapter 5, and describe a transaction in which both operate simultaneously with opposite comparative statics in market depth.
+
+**7.4** The good-deal ceiling ℎ and the risk aversion 𝛾 are both “declared worldviews.” Contrast what evidence could falsify each declaration, and explain why a mark defensible under both disciplines (Section 7.5) is more audit-robust than one defensible under either alone.
+
+### Mathematical Problems
+
+**7.5** Complete the proof of Proposition 7.4: (a) the buyer’s lower bound in (ii) via subreplication; (b) volume monotonicity (iii) for general concave utility via the certainty-equivalent gain’s concavity, including the implicit-function step.
+
+**7.6** Extend Proposition 7.4 to a residual correlated with one traded factor (𝑒 = 𝛽𝑒 𝑅 m + 𝑒): ˜ show the hedge absorbs 𝛽𝑒 and the price formula holds with 𝑒’s ˜ moments—“only the orthogonal residual is charged.”
+
+**7.7** Prove that the entropic risk measure is convex and cash invariant but not positively homogeneous, and verify its robust representation on a two-point Ω by direct maximization over with the entropy penalty.
+
+**7.8** Prove the coherent-case necessity argument of Theorem 7.6 in full detail on Ω = {𝜔1 , 𝜔2 , 𝜔3 }, exhibiting the representing set for 0.5 explicitly.
+
+**7.9** For the one-period binomial analogue of the driver 𝑔 = ℎ|𝑧| (define the discrete 𝑔-expectation by backward recursion), prove the comparison theorem and show the induced static operator at time 0 coincides with the good-deal bound over the corresponding one-step Girsanov interval.
+
+### Computational Problems
+
+**7.10** Exercises 119
+
+**7.11** Solve the quadratic-driver BSDE for a two-factor simulated claim by backward Euler with regression; validate against the closed-form exponential indifference price on the Gaussian sub-case, reporting the grid-refinement convergence rate.
+
+**7.12** (Calibrating 𝛾.) Take three stylized accepted deals (size, residual variance, price paid); back out the implied 𝛾 from each via Proposition 7.4; test internal consistency and compute the demand curve the median 𝛾 implies for the co-investment.
+
+**7.13** In secondary markets, observed block discounts reflect the marginal buyer’s indifference price. Combine this chapter’s exponential–Gaussian pricing with Chapter 5’s search model into an equilibrium in which heterogeneous-𝛾 buyers arrive at rate 𝜈: characterize the stationary distribution of accepted discounts, and design an estimation strategy that separates preference dispersion from search frictions using data on time-on-market and realized discounts jointly.

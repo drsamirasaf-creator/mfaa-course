@@ -1,0 +1,68 @@
+---
+title: "Chapter 9 · Buyout Valuation: The Stochastic LBO"
+---
+
+## Chapter at a glance
+
+The opening problem's deterministic spreadsheet, rebuilt with distributions. The chapter models buyout equity as a call on enterprise value under EBITDA risk, multiple regimes, and sweep-driven debt; treats exit as an optimal-stopping problem; and decomposes value creation into leverage, operational, and multiple components. Its discipline is probabilistic: report the base case's percentile within the distribution, not the point estimate.
+
+## Learning Outcome Statements
+
+**LOS 9.1** — *Formulate a leveraged buyout as a stochastic system—EBITDA dynamics, multiple regimes, an amortizing debt schedule—with equity as the residual claim under.*
+
+**LOS 9.2** — *Derive closed-form equity values, impairment probabilities, and the leverage amplification of equity risk in the lognormal benchmark, and explain why a deterministic.*
+
+**LOS 9.3** — *Model debt paydown with cash sweeps, compute deleveraging times, and represent covenant status as a finite-state process.*
+
+**LOS 9.4** — *Locate operational value creation as a declared drift wedge in the cash-flow measure, consistent with the premium-location discipline.*
+
+**LOS 9.5** — *Pose exit timing as an optimal stopping problem with regime-dependent multiples, compute the exit boundary by dynamic programming, and interpret its shape.*
+
+**LOS 9.6** — *State the value-bridge identity exactly, allocate its cross term consciously, and identify which bridge components are spanned by public markets.*
+
+**LOS 9.7** — *Analyze the interaction of fund-level carried interest with deal-level leverage, and articulate the resulting GP–LP alignment problem quantitatively.*
+
+
+## Laboratory (book §9.9)
+
+**Module:** LBO Valuation Engine — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+
+A stochastic deal model with the committee panel as its organizing display. **E1** answer the committee (mean, median, impairment probability, and the percentile at which the deterministic 16% sits); **E2** the leverage frontier (equity value, impairment, breach, GP carry, and LP net value across entry leverage — mark where the GP and LP optima diverge); **E3** sell into strength (optimal exit vs fixed year-five across regime persistence); **E4** the stochastic value bridge (spanned vs unspanned value creation at the team's declared operational wedge).
+
+**Downloads:** [Python notebook](../downloads/ch09_laboratory.ipynb) · [Excel workbook](../downloads/MFAA_Ch09_Laboratory.xlsx) · [Slides](../downloads/MFAA_Ch09_Slides.pptx)
+
+## Exercises
+
+Solutions are distributed to instructors with the Instructor's Solutions Manual; they are not posted here.
+
+### Conceptual Problems
+
+**9.1** Explain to a non-quantitative committee member why the deterministic base case is neither the mean nor the median of the deal’s outcome distribution, using only the words convexity, skew, and limited liability.
+
+**9.2** The deal team argues that since they control operations, EBITDA risk is “execution risk, not market risk,” and should not be priced. Using Table 4.1 and Proposition 3.6, sort the claim’s valid and invalid parts and state what the residual’s variance is charged with under Chapter 7’s operators.
+
+**9.3** Why does the hot-regime exit boundary lie below the cold-regime one even though hot-regime proceeds are higher? Answer with the chain’s forgetting rate and the option value of waiting, and predict what happens to the gap as regime persistence increases.
+
+**9.4** A lender proposes a tighter covenant in exchange for a cheaper coupon. Through which terms of the model does each side of the trade enter, and which laboratory outputs would you compare to price the exchange for the equity?
+
+### Mathematical Problems
+
+**9.5** Derive Proposition 9.3(i) in full, including the completion of the square, and extend it to a two-tranche debt stack (senior 𝐷 𝑠 , junior 𝐷 𝑗 ): express junior debt and equity as call spreads and verify the pieces sum to enterprise value.
+
+**9.6** Complete Proposition 9.4: the 𝑟 𝐷 = 𝑔 case, the partial-sweep case 𝑠 < 1, and the comparative statics proofs; then derive the leverage-ratio dynamics 𝐿 𝑡 by Itô and identify the volatility of 𝐿 as a function of 𝐿 itself.
+
+**9.7** For the covenant barrier: in the benchmark with constant 𝑚, compute the probability that 𝐿 𝑡 = 𝐷 𝑡 /(𝑚𝑋𝑡 ) crosses 𝐿¯ before 𝑇 with deterministic 𝐷 𝑡 , reducing it to a first-passage problem for Brownian motion with drift, and give the closed-form reflection-principle answer.
+
+**9.8** Prove the bridge identity (9.4), derive its conditional expectation given entry information, and show the cross term’s mean equals Cov(𝑚 1 , 𝑋1 ) plus drift products— hence is positive precisely when rerating and growth are positively dependent.
+
+**9.9** Formalize Section 9.8: in the lognormal benchmark with fund-level carry 𝜅(𝐺−𝐻) + on exit equity 𝐺, show 𝜕 (carry value)/𝜕𝐷 0 > 0 in a neighborhood of moderate leverage by combining the elasticity formula with call vega, and exhibit the covenant-drag term that eventually reverses the sign.
+
+### Computational Problems
+
+**9.10** Implement the grid DP for (9.3) and reproduce Figure 9.2 from the printed parameters; then implement least-squares Monte Carlo and report the boundary and value agreement.
+
+**9.11** Reproduce laboratory experiment E2’s leverage frontier with common random numbers; report the leverage at which LP net value peaks and the GP–LP gap at 70% entry leverage.
+
+**9.12** Build the stochastic bridge for the opening deal with the multiple regime correlated to a simulated index (𝜌 = 0.7); report each component’s mean, standard deviation, and index correlation, and the spanned fraction of total value creation in the sense of Chapter 3.
+
+**9.13** Design the fund contract as a mechanism: given the leverage–carry interaction of Section 9.8, characterize the (pref, carry, leverage-covenant) combinations that align the GP’s leverage choice with the LP optimum under the lognormal benchmark, and propose an empirical test using cross-sectional variation in fund terms and realized deal leverage in the spirit of Axelson et al. [1].

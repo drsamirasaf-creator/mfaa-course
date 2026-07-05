@@ -1,0 +1,68 @@
+---
+title: "Chapter 5 · Illiquidity and Non-Tradability"
+---
+
+## Chapter at a glance
+
+Illiquidity ceases to be a premium bolted onto a discount rate and becomes a constraint on the action set. The chapter models liquidity as a finite-state process, classifies transaction-cost structures, derives the secondary-market discount from a search model, characterizes the optimal-sale policy as a threshold in urgency, and defines the illiquidity valuation operator L. It previews the option value of waiting that Chapters 13–14 make endogenous.
+
+## Learning Outcome Statements
+
+**LOS 5.1** — *Model liquidity as a finite-state process that constrains the investor’s admissible actions, and distinguish this friction-side treatment from the priced-factor treatment of Chapter 4.*
+
+**LOS 5.2** — *Classify transaction-cost structures (proportional, fixed, impact) and explain why the episodic, block-sized trading of private markets makes state-contingent availability, not the spread, the binding friction.*
+
+**LOS 5.3** — *Derive the distribution of holding periods and of discounted realizable value under Markov liquidity states, in closed form for the two-state chain.*
+
+**LOS 5.4** — *Derive the secondary-market discount as the outcome of a search-andreservation problem, and prove its comparative statics in urgency and market depth.*
+
+**LOS 5.5** — *Formulate forced and voluntary sale timing as a stopping problem over observation-filtration stopping times, anticipating the full theory of Chapter 14.*
+
+**LOS 5.6** — *Define the liquidity-adjusted valuation operator, prove its monotonicity in liquidity transition intensities, and explain in what precise sense it is nonlinear.*
+
+**LOS 5.7** — *Decompose the illiquidity component of required returns into clientele amortization, priced liquidity risk, and state-dependent shadow costs, and assign each to its correct model address.*
+
+
+## Laboratory (book §5.9)
+
+**Module:** Liquidity Shock Simulator — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+
+Manage an illiquid position through simulated liquidity cycles and funding shocks; watch realizable value diverge from fundamental value and price the divergence with L. **E1** replay the fading bid (decompose the discount into urgency and state-transition effects); **E2** option value of waiting (sweep the threshold policy, locate the interior optimum, watch precautionary behavior emerge); **E3** depth versus urgency (iso-discount curves); **E4** tail pricing (the variance-finiteness boundary of the holding-period proposition).
+
+**Downloads:** [Python notebook](../downloads/ch05_laboratory.ipynb) · [Excel workbook](../downloads/MFAA_Ch05_Laboratory.xlsx) · [Slides](../downloads/MFAA_Ch05_Slides.pptx)
+
+## Exercises
+
+Solutions are distributed to instructors with the Instructor's Solutions Manual; they are not posted here.
+
+### Conceptual Problems
+
+**5.1** Classify the following frictions by cost structure (proportional, fixed, impact, availability) and by correct model address (operator constraint, operator discount, SDF factor): a 1% secondary-agent fee; legal costs of an LP transfer; the GP’s right to refuse a transferee; a market-wide freeze of secondary activity; deeper discounts for larger blocks.
+
+**5.2** The opening problem’s buyers bid lower in November partly because they inferred urgency. Distinguish the decision-theoretic channel (the seller’s reservation value fell) from the informational channel (buyers updated on the seller’s constraint), and explain which one Proposition 5.5 captures and which Exercise 5.13 adds.
+
+**5.3** A consultant proposes reporting “liquidity-adjusted NAV” as (1 − 𝛿(ℓ, 𝑢, ¯ 𝑞))×NAV with a fixed average urgency 𝑢. ¯ Using Sections 5.6 and 5.8, explain what this number is (a realizable value under a hypothetical squeeze) and what it is not (the holder’s value), and when each is the right report.
+
+**5.4** Explain why L ’s nonlinearity (Proposition 5.7(iii)) implies that the illiquidity discount of a portfolio of LP stakes is generally smaller than the sum of stand-alone discounts, and connect this to the pooling logic of secondary funds.
+
+### Mathematical Problems
+
+**5.5** Solve (5.1) in closed form for uniform 𝐹 on [1 − 𝑑, ¯ under which the used in Figure 5.2, and derive the exact condition on (𝑢, 𝜈, 𝜌, 𝑑) seller accepts every offer (the reservation constraint binds at the support’s bottom).
+
+**5.6** Extend Proposition 5.4 to the three-state chain via the linear-system method of Proposition 4.6: compute e[𝑒 −𝜌 𝜎 ] and e[𝑒 −𝜌 𝜎 𝑉 𝜎 ] starting from each state, where 𝜎 is the first Liquid time, and verify the two-state formulas as a merging limit.
+
+**5.7** Derive the variance-finiteness condition of Proposition 5.4(iv) and compute the full Mellin transform e[(𝑒 −𝜌 𝜎 𝑉 𝜎 ) 𝜃 ], identifying the power-law tail index of realizable value induced by exponential waiting against lognormal growth.
+
+**5.8** In the search model, let urgency follow a two-state chain (calm/squeeze) rather than a constant. Write the coupled reservation equations, prove existence and uniqueness by the monotone system argument of Proposition 4.6, and show 𝑆 ∗ (calm) > 𝑆 ∗ (squeeze).
+
+**5.9** Construct the two-claim counterexample promised in the proof of Proposition 5.7(iii): claims whose optimal sale states differ, with L (𝐷 1 + 𝐷 2 ) <L (𝐷 1 ) +L (𝐷 2 ) under the single-policy constraint, and compute the subadditivity gap.
+
+### Computational Problems
+
+**5.10** Implement the search-model panel and reproduce Figure 5.2 (left) from the printed parameters; add beta-distributed offers and report how offer-dispersion changes (Proposition 5.5(iii)) move the curves.
+
+**5.11** Implement the holding-period dashboard: verify Proposition 5.4(ii) by Monte Carlo across a (𝜈, 𝜌, 𝑔) grid, then map the empirical variance-explosion boundary and compare with (iv).
+
+**5.12** Run experiment E2 programmatically: for call intensities {0.5, 1, 2, 4} per year, compute the optimal urgency threshold per state and the value function; plot the precautionary shift and quantify the value of doubling the liquid reserve at each intensity.
+
+**5.13** Replace the exogenous offer distribution with Nash bargaining in which the buyer observes a noisy signal of the seller’s urgency. Characterize the equilibrium mapping from the seller’s funding state to the accepted discount, and design an empirical test separating the reservation-value channel from the inference channel using deadline-driven (quarter-end) variation in seller urgency.

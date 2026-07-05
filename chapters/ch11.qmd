@@ -1,0 +1,68 @@
+---
+title: "Chapter 11 · Private Credit: Default, Recovery, and Covenants"
+---
+
+## Chapter at a glance
+
+Private credit is priced by decomposing a quoted spread into what each basis point compensates: expected loss, a default-risk premium, illiquidity, and covenant or information rents. The chapter builds a hybrid default intensity riding the borrower's leverage path, state-dependent recovery drawn at the worst time, a covenant three-state engine, and prepayment — then insists each block be labeled by its measure and its address. Its organizing display is the spread waterfall.
+
+## Learning Outcome Statements
+
+**LOS 11.1** — *Specify the cash-flow anatomy of a bilateral loan—coupons, fees, default, recovery, prepayment, amendment—as a marked point process with state-dependent.*
+
+**LOS 11.2** — *Derive, with proof, survival probabilities and defaultable claim prices in the doubly stochastic (Cox) framework, including the recovery-of-market-value reduction.*
+
+**LOS 11.3** — *Connect reduced-form intensities to the structural first-passage view of the leveraged borrower, and exploit the private lender’s information advantage in the hybrid.*
+
+**LOS 11.4** — *Quantify wrong-way recovery risk through the covariance identity for expected loss, and model state-dependent loss-given-default. The answer to teach: wrong-way risk is a covariance with a sign you can prove.*
+
+**LOS 11.5** — *Represent covenant life as a three-state process, value the covenant as a lender option, and price the removal of that option (cov-lite).*
+
+**LOS 11.6** — *Analyze prepayment as the borrower’s call, derive its negative-convexity consequences, and adjust effective duration accordingly.*
+
+**LOS 11.7** — *Decompose a private-credit spread into expected loss, default risk premium, illiquidity, and residual—each located at one address—and reconcile physical and.*
+
+
+## Laboratory (book §11.9)
+
+**Module:** Private Credit Engine — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+
+Price bilateral loans with all four layers live; the spread waterfall is the organizing display. **E1** decompose the 575 (the waterfall with bands, the sentence each block licenses in committee English); **E2** price cov-lite (covenant value by regime, verifying the three monotonicities); **E3** wrong-way stress (sweep the recovery–regime link, separating the P-effect from the priced effect); **E4** reconcile the committee (back out the P/Q wedge and convert it to a default-risk Sharpe contribution — the Chapter 7 audit applied to credit).
+
+**Downloads:** [Python notebook](../downloads/ch11_laboratory.ipynb) · [Excel workbook](../downloads/MFAA_Ch11_Laboratory.xlsx) · [Slides](../downloads/MFAA_Ch11_Slides.pptx)
+
+## Exercises
+
+Solutions are distributed to instructors with the Instructor's Solutions Manual; they are not posted here.
+
+### Conceptual Problems
+
+**11.1** Classify each component of the loan (11.1) in the taxonomy of Table 2.1 (rate, event intensity, mark), and state which components the lender’s information covenant makes better-observed than a public bondholder’s filtration would.
+
+**11.2** Explain, for a non-quantitative committee, why the agent’s 1.9% and the desk’s 4.5% can both be right, using only the ideas “measured frequency” and “price of bearing”—then state what would constitute an inconsistency between them.
+
+**11.3** A sponsor argues that quarterly certified reporting makes covenants redundant: “you’ll see trouble coming either way.” Separate the information content of the covenant from its control-rights content, and say which one Section 11.6’s option value prices.
+
+**11.4** Why does the wrong-way covariance of Proposition 11.5 bite harder for a portfolio than for a single loan? Connect to the common stress factor and to the variance floor of Section 11.8.
+
+### Mathematical Problems
+
+**11.5** Derive the recovery-of-face pricing formula: with recovery 𝑅f of par paid at 𝜏d , show ∫ 𝑇 h∫ 𝑇 i ∫𝑠 ∫𝑇 ∫𝑠 − 0 (𝑟+𝜆) − 0 (𝑟+𝜆) 𝑉0 = e 𝑐𝑒 𝑠+𝑒 + 𝑅f 𝜆 𝑠 𝑒 − 0 (𝑟+𝜆) 𝑠 , 0 0 and quantify the wedge against Proposition 11.3 for constant parameters.
+
+**11.6** In the hybrid model (11.2) with lognormal EV, derive the dynamics of 𝜆 𝑡 = Λ(𝑑𝑡 ) by Itô for smooth Λ, and show the intensity’s volatility is proportional to |Λ′ (𝑑𝑡 )|: default risk is most volatile exactly near the covenant region.
+
+**11.7** Prove the association inequality used in Proposition 11.5 for nondecreasing 𝑓 , 𝑔 of a real variable, and extend the wrong-way identity to the pricing measure: show the -expected loss adds a term plus a measure-wedge cross term, and identify each in the waterfall (11.3).
+
+**11.8** Model the covenant as a barrier option: with two barriers 𝐵 < 𝐵c on lognormal EV, express the value of the covenant as a difference of first-passage functionals, and prove monotonicity in 𝐵c and in 𝜎EV via pathwise coupling.
+
+**11.9** Carry out the reconciliation of E4 analytically: given (𝜆 ¶ , 𝜆, 𝑅), define the defaultrisk Sharpe contribution over horizon Δ as excess spread over expected loss divided by loss volatility; compute it for (1.9%, 4.5%, 40%) at Δ = 1 and compare with a good-deal ceiling of 0.5.
+
+### Computational Problems
+
+**11.10** Reproduce Figure 11.1 from the printed seed; then vary the recovery–regime link and regenerate the right panel, reporting the covariance correction in spread terms across the sweep.
+
+**11.11** Implement the covenant three-state engine on Chapter 9 borrower paths; reproduce E2’s cov-lite repricing by regime and verify the three monotonicities numerically.
+
+**11.12** Build the prepayment panel: with intensity 𝜆p increasing in the loan’s above-par value, plot loan value against borrower quality with and without call protection; report effective and spread durations and locate the negative-convexity region.
+
+**11.13** Waiver terms are negotiated, not drawn from exogenous intensities: model the breach state as a bargaining game between a lender with acceleration rights and a sponsor with reinvestment options, characterize equilibrium waiver fees and repricings as functions of distance to insolvency and of the sponsor’s fund-level incentives 178 11 Private Credit: Default, Recovery, and Covenants (Chapter 9’s carry convexity), and design an empirical test using amendment-andwaiver pricing across the cycle.

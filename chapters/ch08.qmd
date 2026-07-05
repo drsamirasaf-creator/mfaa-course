@@ -1,0 +1,68 @@
+---
+title: "Chapter 8 · Cash-Flow Modeling of Fund Structures"
+---
+
+## Chapter at a glance
+
+The chapter supplies the contractual layer: a fund interest is not a fraction of a portfolio but a claim on net distributions pushed through fees and a piecewise-linear waterfall, an obligation to fund future calls, and a liquidity position. It models calls and distributions as marked point processes, writes the waterfall as an exact contractual map, proves the option-like properties of carried interest and the pathologies of IRR, and designs commitment-pacing policies. It is the engine on which Chapters 9–10 mount asset-specific dynamics.
+
+## Learning Outcome Statements
+
+**LOS 8.1** — *Formalize fund mechanics—commitments, calls, distributions, fees, NAV—as adapted processes and state the accounting identities that constrain them.*
+
+**LOS 8.2** — *Model capital calls and distributions as marked point processes with ageand state-dependent intensities, derive expected schedules in closed form, and recover the Takahashi–Alexander model as the deterministic limit.*
+
+**LOS 8.3** — *Decompose the J-curve into its fee, timing, and appraisal-smoothing components.*
+
+**LOS 8.4** — *Write distribution waterfalls as explicit piecewise-linear contractual maps, derive the LP and GP payoff functions with their breakpoints, and prove the optionlike incentive properties of carried interest, including the European-versus-American.*
+
+**LOS 8.5** — *State and prove the pathologies of IRR (non-uniqueness, timing manipulability) and interpret TVPI, DPI, and Kaplan–Schoar PME as valuation statements under specific SDFs.*
+
+**LOS 8.6** — *Design commitment-pacing policies using the stationary (Little’s-law) relation between commitment rate, holding duration, and steady-state exposure.*
+
+**LOS 8.7** — *Downstream: Chapter 9 consumes the waterfall and carry analysis at deal level; Chapter 17’s commitment-risk program is Exercise 8.*
+
+
+## Laboratory (book §8.9)
+
+**Module:** Fund Cash-Flow Engine — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+
+Generate portfolio paths, push them through calls, fees, and an exactly tier-tracked waterfall, and report the LP's world. **E1** fee anatomy (decompose the J-curve trough); **E2** the price of a clause (European vs American, plus clawback); **E3** manufacture an IRR (subscription line shifts IRR right while PME stands still); **E4** the 82% verdict (breakeven on reported vs filtered NAV, reconciled with the Chapter 5 seller).
+
+**Downloads:** [Python notebook](../downloads/ch08_laboratory.ipynb) · [Excel workbook](../downloads/MFAA_Ch08_Laboratory.xlsx) · [Slides](../downloads/MFAA_Ch08_Slides.pptx)
+
+## Exercises
+
+Solutions are distributed to instructors with the Instructor's Solutions Manual; they are not posted here.
+
+### Conceptual Problems
+
+**8.1** List the three components of the “82% of NAV” quote that make it incommensurable across funds (waterfall position, uncalled fraction, NAV smoothing), and propose a standardized quotation convention that fixes each.
+
+**8.2** Explain why the GP’s call-like payoff (Proposition 8.5(ii)) interacts with fund leverage: through which state variables does the incentive operate, and which clause (pref rate, catch-up percentage, carry level) most directly prices it?
+
+**8.3** A fund advertises “top-quartile IRR.” Using Proposition 8.6 and the smoothing results of Chapter 6, list the adjustments a diligence team should demand before comparing it with another fund’s “top-quartile TVPI.”
+
+**8.4** Why does recycling (re-calling distributed capital during the investment period) raise expected TVPI while leaving PME approximately unchanged? State the identity involved.
+
+### Mathematical Problems
+
+**8.5** Derive the expected distribution schedule analogous to Proposition 8.3.2 for the exit MPP with GBM portfolio growth: show e[𝑉𝑡 ] solves a linear ODE with jumpoutflow term −𝜆 𝐺 𝑔(𝑡) 𝑚 ′ e[𝑉𝑡 ] and exhibit the closed form; verify against the Takahashi–Alexander distribution equation.
+
+**8.6** Complete theÍ final subadditivity step in the proof of Proposition 8.5(iii): show (𝑢 − 𝑥 ∗ ) + ≥ 𝑖 (𝑢 𝑖 − 𝑥 𝑖∗ ) + fails in general but that the combined two-term GP map still satisfies the claimed inequality, by verifying it tier by tier on the partition of deals into hurdle-clearing and hurdle-missing sets.
+
+**8.7** (IRR.) Construct a realistic-looking fund cash flow with three IRRs; prove the reinvestment identity of Proposition 8.6(iii) and compute the wedge between IRR and the money-weighted return under money-market reinvestment for the opening fund’s mean path.
+
+**8.8** Give the sample-path proof of Little’s law used in Proposition 8.7: for a stationary marked point process of call arrivals with sojourn marks, show time-average invested capital equals arrival rate times mean sojourn, stating the ergodicity assumptions.
+
+**8.9** Derive the distribution of the J-curve breakeven time in the simplified model with deterministic calls and a single exponential exit clock, and show its variance is decreasing in the exit intensity—then explain what the simulated fan of Figure 8.2 adds that this reduced model misses.
+
+### Computational Problems
+
+**8.10** Implement the tier-tracked European waterfall with exact pref accrual; validate against Proposition 8.5’s closed form for single-date liquidations, then quantify the path effect: the value difference between interim-distribution tier-tracking and end-of-life application, across exit tempos.
+
+**8.11** Reproduce the laboratory’s E3: IRR and PME distributions with subscription-line delays of 0–4 quarters at two financing spreads; report the delay at which median IRR gains 200 basis points and the corresponding PME change.
+
+**8.12** Build the two-vintage program simulator with a common deal-flow regime; estimate the funding-gap distribution (calls minus distributions over rolling years) with and without regime correlation, and size the liquid reserve that keeps the 99% funding gap covered.
+
+**8.13** NAV-based lending (borrowing against fund NAV to fund calls or accelerate distributions) inserts a senior claim between the portfolio and the LP waterfall. Extend 134 8 Cash-Flow Modeling of Fund Structures the model of this chapter with a NAV facility (advance rate, covenant on LTV, forced-deleveraging rule), characterize its effect on the LP payoff map and on Proposition 8.5’s incentive structure, and design an empirical strategy for detecting facility-driven distribution acceleration in reported fund data.

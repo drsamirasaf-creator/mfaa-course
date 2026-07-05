@@ -1,0 +1,70 @@
+---
+title: "Chapter 10 · Venture Capital: Power Laws, Staged Financing, and Security Design"
+---
+
+## Chapter at a glance
+
+Venture returns are governed by power laws, not the bell curve, and value flows through preference stacks and staged financing, not simple ownership. The chapter builds the financing-tree engine (staging, dilution, reserves), the cap-table engine (conversion, participation, class-by-class valuation), and the portfolio/inference engine (Pareto outcomes, hit arithmetic, skill-versus-luck posteriors). Its organizing image is the two-marks panel: headline post-money against the holder's class value.
+
+## Learning Outcome Statements
+
+**LOS 10.1** — *Characterize venture outcomes with Pareto-tailed distributions, determine which moments exist, and derive the growth rate of the expected portfolio maximum.*
+
+**LOS 10.2** — *Explain, with proof-backed statements, why a venture fund’s outcome is dominated by its best draw, and what this does to skill-versus-luck inference from track.*
+
+**LOS 10.3** — *Value staged financing as a compound abandonment option and quantify the value of the option to stop.*
+
+**LOS 10.4** — *Perform exact dilution algebra across rounds, including option-pool adjustments, and track cumulative ownership.*
+
+**LOS 10.5** — *Derive the payoff maps of preferred securities (non-participating and participating), locate conversion thresholds, and prove that headline post-money valuations overstate common-share value.*
+
+**LOS 10.6** — *Recognize the selection structure of venture data—values observed only at financing events—and its biases on measured returns and risk.*
+
+**LOS 10.7** — *Design venture portfolios under power laws: shots on goal, ownership targets, reserve strategy, and the return-the-fund arithmetic.*
+
+
+## Laboratory (book §10.8)
+
+**Module:** Venture Portfolio and Security Engine — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+
+Three coupled modules with the two-marks panel as its organizing display. **E1** tail-index sensitivity (sweep α, track fund-multiple dispersion and P(return the fund) — where Gaussian intuition fails); **E2** reserves versus shots (allocate between more initial checks and deeper reserves); **E3** the down-round exit (build a senior participating stack, exit at 0.6× the headline, report each class's recovery); **E4** skilled or lucky (locate a 4.1× fund in the luck distribution; how many consecutive funds shift the posterior to 9:1 for skill).
+
+**Downloads:** [Python notebook](../downloads/ch10_laboratory.ipynb) · [Excel workbook](../downloads/MFAA_Ch10_Laboratory.xlsx) · [Slides](../downloads/MFAA_Ch10_Slides.pptx)
+
+## Exercises
+
+Solutions are distributed to instructors with the Instructor's Solutions Manual; they are not posted here.
+
+### Conceptual Problems
+
+**10.1** Explain to an LP why removing one deal from a twenty-eight-deal venture fund moving the multiple from 4.1× to 1.3× is expected behavior of the asset class
+
+**10.2** Why is a “1× non-participating preference” often described as free downside protection whose cost appears only in bad states? Identify who pays it, in which region of the payoff map, and how the headline mark hides the transfer.
+
+**10.3** Contrast the buyout equity claim of Chapter 9 (call on enterprise value) with the venture common claim of Proposition 10.5(iii) (residual behind a preference stack): which is more convex near the money, and what does each imply for volatility preferences of the respective holders?
+
+**10.4** The option-pool shuffle of Proposition 10.4(iii) is often defended as “standard.” Restate it as an equivalent price change and compute the effective pre-money for 𝑃 = 40, 𝐴 = 10, 𝜋 = 15%.
+
+### Mathematical Problems
+
+**10.5** Extend Proposition 10.2 to a noisy signal (the stage-two decision uses a posterior on {g, b}): derive staging value as a function of signal informativeness and show it is maximized at interior informativeness when abandonment would otherwise never (or always) occur.
+
+**10.6** Prove the elementary heavy-tail bound cited in Proposition 10.3(iii) for 𝛼 < 1: for i.i.d. Pareto variables, e[𝑆 𝑛 ∧ 𝐾] ≤ 𝑐 e[𝑀𝑛 ] with a constant independent of 𝑛, and interpret.
+
+**10.7** Carry out the option-pool algebra of Proposition 10.4(iii) in full, and derive the founders’ fraction after 𝑘 rounds each with a pool refresh to 𝜋 of post.
+
+**10.8** Add a participation cap (min of participating payoff and 𝑐 · 𝐼) to Proposition 10.5(ii): derive the payoff map, its second conversion region, and the exit intervals on which the capped-participating holder prefers a lower exit price to a higher one under a fixed-share acquisition—the governance pathology in formula form.
+
+**10.9** Formalize the sale-time conflict: for exits 𝐸 ∈ (𝐿, 𝐸 ∗ ), show non-participating preferred is outcome-indifferent over an interval where common’s payoff is strictly increasing; derive the interval’s length as a function of (ℓ, 𝑓 ) and relate to observed drag-along disputes.
+
+**10.10** Compute the entropic (exponential-utility) certainty equivalent of a Pareto-tailed gain bounded below at 0: show finiteness for all 𝛾 > 0, that it is increasing in 𝛼-tail thinning for matched medians, and that for small 𝛾 it approaches the (finite, 𝛼 > 1) mean—reconciling Chapter 7’s operators with infinite variance.
+
+### Computational Problems
+
+**10.11** Reproduce both panels of Figure 10.2 from the printed seed; add 𝛼 = 0.9 and display the non-vanishing top-deal share of Proposition 10.3(iii). 164 10 Venture Capital: Power Laws, Staged Financing, and Security Design
+
+**10.12** Implement the cap-table engine for a four-round stack and reproduce experiment E3’s down-round exit table; verify conservation and the conversion thresholds analytically.
+
+**10.13** Run the inference module: for the opening fund’s record, report the posterior probability of positive manager drift under priors centered at zero, and the consecutivefund requirement of E4.
+
+**10.14** Preference stacks are endogenous: terms respond to bargaining power over the cycle, and headline-preserving down rounds (flat pre-money, richer preferences) trade transparency for optics. Build an equilibrium model in which founders trade headline valuation against security seniority under investor competition, derive testable implications for the term/valuation mix over funding cycles, and design an identification strategy using episodes of abrupt funding-condition shifts, connecting the security-repricing framework of Gornall and Strebulaev [6]with the regime machinery of Chapter 4.

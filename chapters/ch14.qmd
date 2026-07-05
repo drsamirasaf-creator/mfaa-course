@@ -1,0 +1,68 @@
+---
+title: "Chapter 14 · Optimal Stopping and Stochastic Control"
+---
+
+## Chapter at a glance
+
+This chapter is the book's decision engine. The dynamic programming principle generates the HJB equation for controls and the variational inequality min{ρv − Lv − f, v − g} = 0 for stopping; candidates come from ansätze or numerics; and the verification theorems certify candidate and policy together. The obstacle anatomy — continuation region (v > g), stopping region (v = g), free boundary with smooth fit — is solved by implicit finite differences with PSOR and by regression Monte Carlo, with the verification checklist built in as a certification layer.
+
+## Learning Outcome Statements
+
+**LOS 14.1** — *Classify the recurring private-market decisions—exit, abandonment, refinancing, staging, switching, rebalancing—into the standard problem classes of stopping, switching, impulse, and continuous control.*
+
+**LOS 14.2** — *State the dynamic programming principle on the book’s canonical state vector and derive Hamilton–Jacobi–Bellman equations and variational inequalities.*
+
+**LOS 14.3** — *State and prove verification theorems for controlled diffusions and for optimal stopping, and use them to certify candidate value functions and policies, including the.*
+
+**LOS 14.4** — *Explain the roles of viscosity solutions, smooth fit, and free-boundary regularity, and know precisely which parts this book proves and which it cites.*
+
+**LOS 14.5** — *Formulate and solve stopping problems constrained to liquidity states—sale only when a buyer exists—and derive the “sell when you can” threshold ordering.*
+
+**LOS 14.6** — *Choose and implement numerical methods—finite differences with projected iteration, regression Monte Carlo, policy iteration—matched to problem structure.*
+
+**LOS 14.7** — *Recognize the solved instances of Chapters 9, 10, 12, and 13 as applications of one machine.*
+
+
+## Laboratory (book §14.9)
+
+**Module:** Optimal Exit Solver — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+
+A general solver for stopping, switching, and constrained problems, with the verification checklist as a certification layer. **E1** four memos, one map (solve the opening problem's three-mode, two-obstacle program and identify each verb's optimal region); **E2** certification theater (feed the solver a corrupted candidate and watch the verification report localize the failure, then repair by projection and re-certify). The development option (V* = 2.366K) is the closed-form audit case; the grid solution matches it to ~2e-3 in sup norm.
+
+**Downloads:** [Python notebook](../downloads/ch14_laboratory.ipynb) · [Excel workbook](../downloads/MFAA_Ch14_Laboratory.xlsx) · [Slides](../downloads/MFAA_Ch14_Slides.pptx)
+
+## Exercises
+
+Solutions are distributed to instructors with the Instructor's Solutions Manual; they are not posted here.
+
+### Conceptual Problems
+
+**14.1** Classify each decision in the opening problem’s four memos into Table 14.1’s classes, write the composite problem’s state vector, and identify which pairwise interactions the four truncations discarded.
+
+**14.2** Why does the verification theorem’s “solve however you like” division of labor matter institutionally? Contrast the audit trail of a certified numerical policy with an uncertified one, in the language of the Chapter 1 contract.
+
+**14.3** Explain, without equations, why smooth fit holds at the boundary of a onedimensional stopping problem: what arbitrage-like improvement does a kink in the value function permit? 224 14 Optimal Stopping and Stochastic Control
+
+**14.4** The “dry powder” debate: committees argue whether uncalled capital should wait for distress. Recast the debate as a constrained-stopping problem for the buyer (purchase only when sellers exist), state the analogue of Proposition 14.6(iii), and identify what empirical quantity would settle the committee’s argument.
+
+### Mathematical Problems
+
+**14.5** Prove the discrete-time DPP: for the finite-horizon control problem with historydependent policies, show the value function satisfies the backward recursion and that Markov policies suffice, making the measurable-selection step explicit; exhibit a counterexample to the recursion when the reward is not integrable.
+
+**14.6** Complete the Itô step in Theorem 14.5 for 𝐶 1 , piecewise-𝐶 2 functions: mollify 𝑤, apply Itô to the mollification, and pass to the limit using bounded second derivatives near the interface; identify where the argument fails if 𝑤 is merely continuous across the boundary.
+
+**14.7** State and prove the infinite-horizon verification theorem for stopping under the transversality condition, and verify the condition for the development option via 𝛽 the local-martingale property of 𝑒 −𝜌𝑡 𝐴𝑉𝑡 and boundedness of the candidate on the continuation region.
+
+**14.8** Isolate the single-crossing condition in Proposition 14.6(i): for OU signal steps and linear obstacle 𝑔(𝑥) = 𝑥, show 𝛽𝑒 −𝜅Δ𝑡 < 1 implies the continuation- minusobstacle difference is nonincreasing; construct a convex 𝑔 violating single crossing and describe the resulting stopping region.
+
+**14.9** Extend Proposition 14.6 to a partially observed window: the seller sees only a noisy signal of 𝑍 (the Chapter 6 filter supplies 𝜋𝑡 = ¶(𝑍𝑡 = liq | 𝑡 )); show the problem becomes stopping on the belief state, derive the threshold in (𝑥, 𝜋), and prove monotonicity of the boundary in 𝜋.
+
+### Computational Problems
+
+**14.10** Exercises 225
+
+**14.11** Reproduce Figure 14.1 from the printed parameters; then sweep frozen-state persistence per E3 and report the threshold discount and value gap curves.
+
+**14.12** Implement Longstaff–Schwartz for the constrained problem of Proposition 14.6 (regime in the basis); compare boundaries and values against the grid, and exhibit the basis misspecification that produces a visibly biased liquid-state boundary.
+
+**14.13** The window is strategic: buyers appear partly in response to expected selling (the equilibrium counterpart of Exercise 13.13). Model constrained stopping in which the liquid state’s arrival intensity depends on the population distribution of sellers’ signals, characterize the mean-field equilibrium (thresholds optimal given arrival intensities; arrival intensities consistent with threshold-induced flow), and determine whether equilibrium accelerates or delays exercise relative to Proposition 14.6—connecting this chapter’s machinery to the search equilibrium of Chapter 5 and the clustering amplification of Chapter 13.

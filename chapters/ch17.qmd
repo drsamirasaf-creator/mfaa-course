@@ -1,0 +1,68 @@
+---
+title: "Chapter 17 · Robust Valuation, Model Risk, and Alternative-Asset Portfolio Construction"
+---
+
+## Chapter at a glance
+
+The book's capstone assembles every prior engine into one cockpit. Robust valuation reweights scenarios by the Gibbs tilt within an ambiguity budget; CVaR is minimized by the Rockafellar-Uryasev linear program; the liquidity budget and pacing constraints bind where variance does not; and the phantom-breach result shows why a band policy triggered on reported shares mandates its largest sales at the deepest discounts, against a breach that de-smoothed accounting shows to be resolving. Allocations ship with certificates: the attaining tilt, the binding constraint, and the input bands.
+
+## Learning Outcome Statements
+
+**LOS 17.1** — *Distinguish parameter uncertainty from model ambiguity, represent both with ambiguity sets built from the book’s posteriors, and prove the variational formula.*
+
+**LOS 17.2** — *Compute worst-case valuations over relative-entropy balls in closed form (exponential tilting), and design stress directions from the book’s estimated objects:.*
+
+**LOS 17.3** — *Construct mean–variance and mean–CVaR allocations on de-smoothed inputs, prove the Rockafellar–Uryasev representation, and quantify the misallocation.*
+
+**LOS 17.4** — *Model commitment pacing as control of the Chapter 8 engine and size the liquidity budget that replaces variance as the binding constraint.*
+
+**LOS 17.5** — *Formalize the denominator effect, prove the phantom-breach timing result, and design band governance (filtered triggers, regime-dependent bands) that breaks the.*
+
+**LOS 17.6** — *Run reverse stress tests as dual attainment: the Gibbs tilt that achieves the worst case is the breaking scenario, readable path by path.*
+
+**LOS 17.7** — *Assemble the book’s architecture into one program—and one sentence—and know where its open problems begin.*
+
+
+## Laboratory (book §17.10)
+
+**Module:** Portfolio Construction Suite — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+
+The book's cockpit: robust optimizer, pacing corridor, band-governance with the phantom-breach demonstration, liquidity budget, reverse-stress tilt finder. **E1** survive the quarter (replay the opening problem across 2,000 drawdowns, naive vs robust); **E2** the price of the print (reported vs filtered triggers — the fraction of sales that de-smoothed accounting phantoms, and the t* lag); **E3** ambiguity sweep (which asset shrinks first as ambiguity rises); **E4** break the program (reverse-stress the flagship, name the first constraint to fail, redesign one dial). The phantom breach peaks at t* ≈ 10 months, when the true deviation has resolved to 20%.
+
+**Downloads:** [Python notebook](../downloads/ch17_laboratory.ipynb) · [Excel workbook](../downloads/MFAA_Ch17_Laboratory.xlsx) · [Slides](../downloads/MFAA_Ch17_Slides.pptx)
+
+## Exercises
+
+Solutions are distributed to instructors with the Instructor's Solutions Manual; they are not posted here.
+
+### Conceptual Problems
+
+**17.1** Map each mechanism of the opening problem’s quarter to the chapter that models it, and identify which link of Figure 17.3 each of the three governance cuts severs.
+
+**17.2** Translate constraint versus multiplier preferences for a committee: what question does 𝜂 answer, what question does 𝜃 answer, and why does the duality of Exercise 17.5 mean the committee only needs to answer one?
+
+**17.3** Argue that the liquidity budget, not variance, is the binding constraint for a perpetual institution with spending rules; construct the stylized case where a lower-variance allocation has strictly worse stress coverage.
+
+**17.4** Why do pre-authorized policies dominate case-by-case discretion in stress? Combine Proposition 14.6(iii) with a realistic governance clock, and state the cost of the committee’s next scheduled meeting in the currency of Proposition 17.6.
+
+### Mathematical Problems
+
+**17.5** Prove the Lagrangian duality between maxmin over {𝐻 (𝑄 | ¶) ≤ 𝜂} and multiplier preferences: weak duality, Slater’s condition on the entropy ball, and the bijection 𝜂 ↔ 𝜃 along the tilt family; identify where boundedness of 𝑋 can be relaxed.
+
+**17.6** Complete Proposition 17.3: continuity and strict monotonicity of 𝜆 ↦→ 𝐻 (𝑄 𝜆 | ¶) via cumulant derivatives, the entropy supremum of the tilt family, and the envelope derivative 𝜕𝜂 = −𝜆.
+
+**17.7** Complete Proposition 17.4 for distributions with atoms: the minimizer set as the quantile interval, the atom-splitting term, and the LP’s exactness on finite samples; verify coherence axioms directly from the representation.
+
+**17.8** Extend Proposition 17.6: (a) derive the wealth-cost identity 𝛿𝑊Δ𝑠/(1 − 𝛿𝑠) exactly and its equilibrium amplification when 𝛿 responds to aggregate sales with elasticity 𝜄; (b) let 𝜅 be regime-dependent and compute the expected realized discount of a reported-trigger policy versus a filtered-trigger policy in closed form for a two-state chain.
+
+**17.9** (APW-lite.) Two assets, CARA utility, illiquid asset tradable only at Poisson(𝜈) times with the liquid asset financing consumption between them: write the coupled HJB (Chapter 14), solve the exponential ansatz, and derive the illiquid weight’s shrinkage relative to Merton as a function of 𝜈 and the spending rate.
+
+### Computational Problems
+
+**17.10** Reproduce Figure 17.1 from the printed seed; report the private-asset overallocation induced by reported moments at three risk levels, and the shadow price of the liquidity budget along the constrained frontier.
+
+**17.11** Build the pacing corridor: simulate the Chapter 8 engine under the regime chain with stress covariance on; report the commitment-rate corridor that keeps breach probability below 5% and the corridor’s sensitivity to the distribution-halt toggle.
+
+**17.12** Implement the reverse-stress tilt finder: bisection on 𝜆, tilted-anatomy report, and the E4 redesign loop on the flagship program.
+
+**17.13** The aggregate question: embed many institutions running this chapter’s governance (filtered triggers, regime bands, liquidity budgets, opportunistic sleeves) in the equilibrium settings of Exercises 5.13, 13.13, and 14.13—endogenous secondary discounts, threshold clustering, strategic windows. Establish existence of a stationary equilibrium, determine whether the dismantling kit is macroprudential (does widespread adoption dampen or merely redistribute the spiral? do opportunistic sleeves stabilize prices or race for the same bids?), and characterize the welfare-optimal mix of band width and liquidity budget as a function of the population’s adoption rate—the book’s capstone open problem, whose answer would turn its governance kit from institutional advice into market design.

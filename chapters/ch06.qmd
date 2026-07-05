@@ -1,0 +1,68 @@
+---
+title: "Chapter 6 · Sparse Observation, NAV Smoothing, and Filtering"
+---
+
+## Chapter at a glance
+
+The book's measurement chapter. Private-asset value is latent; what is observed are smoothed appraisals, selected transactions, and kinked waterfall marks. The chapter derives the moment distortions of appraisal smoothing, builds the linear-Gaussian state space, deploys the Kalman filter and its particle-filter extension for nonlinear observation maps, and insists that reconstructed value be reported as a posterior distribution — a filtration and a band, never a point.
+
+## Learning Outcome Statements
+
+**LOS 6.1** — *Characterize the private-market data-generating process—appraisals, transactions, comparables—as observations on the coarse filtration G, and identify the selection mechanisms that bias naive estimates.*
+
+**LOS 6.2** — *Derive, with proof, the moment distortions induced by appraisal smoothing: variance understatement, positive autocorrelation, and beta attenuation with lagaggregation recovery.*
+
+**LOS 6.3** — *Invert the smoothing recursion (Geltner unsmoothing), and quantify the noise amplification that makes naive inversion an overcorrection risk.*
+
+**LOS 6.4** — *Formulate latent private value as a linear-Gaussian state space with public factor loadings and mixed-frequency observations, and estimate its parameters by.*
+
+**LOS 6.5** — *Derive the Kalman filter from Gaussian conditioning, extend it to irregular observation times and missing data, and deploy it for private-asset NAV reconstruction.*
+
+**LOS 6.6** — *Implement the sequential importance resampling particle filter, diagnose degeneracy, and identify the private-market features that make it necessary.*
+
+**LOS 6.7** — *Report reconstructed value as a posterior distribution—filtered and smoothed paths with credible bands—and trace the consequences of de-smoothing for volatility,.*
+
+
+## Laboratory (book §6.9)
+
+**Module:** NAV Unsmoothing and Hidden-Value Reconstruction — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+
+Reconstruct latent value by Kalman and particle filtering with joint parameter estimation; report marks as posterior distributions. **E1** recover the truth (coverage calibration over repeated seeds); **E2** reproduce the committee (the three volatilities — reported, reconstructed, proxy — and the factor-of-two); **E3** the kink (Kalman vs particle around a carry threshold); **E4** overcorrection stress (naive Geltner inversion with a misestimated α̂ manufacturing volatility).
+
+**Downloads:** [Python notebook](../downloads/ch06_laboratory.ipynb) · [Excel workbook](../downloads/MFAA_Ch06_Laboratory.xlsx) · [Slides](../downloads/MFAA_Ch06_Slides.pptx)
+
+## Exercises
+
+Solutions are distributed to instructors with the Instructor's Solutions Manual; they are not posted here.
+
+### Conceptual Problems
+
+**6.1** For each observation type of Section 6.2—appraisal, secondary transaction, venture round, public proxy—name its defect (distortion, selection, indirectness), the filtration event that generates it, and the observation-equation feature that models the defect.
+
+**6.2** The committee’s public-markets team defends its “mid-twenties” number as conservative. Using the spanned/residual decomposition of Chapter 3, explain what risk the proxy measures, what it omits, what it adds (basis), and in what decision contexts it is the right number after all.
+
+**6.3** Explain why filtered and smoothed bands answer different institutional questions (marking today versus attributing history), and give one example where using the smoothed band in a real-time decision would be an information violation in the sense of Definition 2.2.2.
+
+**6.4** A fund’s marks are known to anchor harder in downturns (𝛼 higher when markets fall). Which moment distortions of Proposition 6.3 become state dependent, what does this do to measured downside correlations, and which laboratory toggle tests it?
+
+### Mathematical Problems
+
+**6.5** Prove that the reported-return process of Proposition 6.3 is, for 𝜎𝜀 = 0, an AR(1) in the innovations sense, and compute its full autocovariance generating function; for 𝜎𝜀 > 0 identify the ARMA(1,1) structure and its parameters. Í
+
+**6.6** Generalize Proposition 6.3 to MA(𝑘) appraisal weights 𝑦 𝑛 = 𝑘𝑗=0 𝜃 𝑗 𝑥 𝑛− 𝑗 + 𝜀 𝑛 , Í 𝜃 𝑗 = 1, 𝜃 𝑗 ≥ 0:Íderive the variance ratio and lagged-beta profile, and show mean preservation and 𝑘 𝛽ˆ 𝑘 = 𝛽 survive [8].
+
+**6.7** Derive the steady-state Kalman gain for the scalar model (6.1)–(6.2) with regular reporting, and show the filtered band’s sawtooth amplitude is 𝜎𝜂2 times the interreport interval, as drawn in Figure 1.2. 104 6 Sparse Observation, NAV Smoothing, and Filtering
+
+**6.8** Derive the Rauch–Tung–Striebel smoother by applying Lemma 6.5 to (𝑥 𝑛 , 𝑥 𝑛+1 ) given 𝑦 1:𝑁 , and prove 𝑃𝑛| 𝑁 ⪯ 𝑃𝑛|𝑛 (smoothed bands are tighter).
+
+**6.9** Prove that self-normalized importance-sampling estimates in Algorithm 6.6 are consistent as 𝑁 → ∞ for bounded test functions, and that ESS equals 𝑁 iff weights are uniform (state the LLN you invoke; full CLT theory in 2).
+
+### Computational Problems
+
+**6.10** Implement joint state-space estimation for three correlated private series plus one factor; compare the pairwise de-smoothed correlation matrix with the joint estimate, exhibit a PSD failure of the former under high 𝛼ˆ and noise, and report the allocation difference the two matrices imply for a minimum-variance portfolio.
+
+**6.11** Reproduce Figure 6.2 from the printed seed; then vary the carry threshold’s distance from the current state and plot Kalman bias and particle band width against proximity.
+
+**6.12** (Selection.) Simulate a venture-style observation process in which value is observed only at financing rounds occurring with intensity increasing in value; estimate naive round-to-round volatility and a selection-aware particle-filter volatility, and quantify the naive bias as the intensity’s slope varies.
+
+**6.13** Appraisal behavior is a decision, not a mechanism: valuers weigh reputational costs of volatility against costs of stale marks. Formulate appraisal smoothing as the outcome of a valuer’s objective (state-dependent 𝛼 endogenous to incentives), derive testable implications distinguishing behavioral smoothing from the mechanical recursion, and design an identification strategy using episodes of mandated mark-to-market transitions.

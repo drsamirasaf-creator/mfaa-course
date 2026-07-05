@@ -1,0 +1,66 @@
+---
+title: "Chapter 12 · Real Assets: Real Estate and Infrastructure"
+---
+
+## Chapter at a glance
+
+Real-asset value has a slow numerator and a fast denominator: contracted rent rolls low-pass the market while cap-rate regimes reprice quickly, so the serenity of an income statement can hide equity-like value volatility. The chapter builds lease and concession ladders on rent and volume dynamics, regime cap rates, indexation and regulatory resets, and the perpetual development option whose hurdle multiple exceeds the NPV rule's. Its organizing display is the layer report and the asset's dot on the risk map.
+
+## Learning Outcome Statements
+
+**LOS 12.1** — *Describe real-asset cash flows as layered claims—a contracted lease or concession ladder over a market reversion layer—and classify major asset types by.*
+
+**LOS 12.2** — *Model the lease ladder as a marked point process with renewal and vacancy, and derive stationary occupancy and expected net operating income by renewal-reward.*
+
+**LOS 12.3** — *Prove that a staggered rent roll is a moving average of market rents, quantify the induced smoothing and lag, and distinguish it from the appraisal smoothing of.*
+
+**LOS 12.4** — *Work with cap rates as inverse multiples: derive the Gordon anchor, model regime-dependent cap-rate dynamics, and diagnose appraisal-versus-transaction caprate gaps.*
+
+**LOS 12.5** — *Derive the perpetual development option’s investment threshold and hurdle multiple, and explain why the NPV rule systematically builds too early.*
+
+**LOS 12.6** — *Value infrastructure concessions with inflation indexation and regulatory resets, keeping real and nominal discounting books straight.*
+
+**LOS 12.7** — *Decompose any real asset into bond-like and equity-like layers on the risk map, and audit claims of the form “bond-like cash flows with equity-like returns.*
+
+
+## Laboratory (book §12.9)
+
+**Module:** Real Asset Cash-Flow Engine — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+
+Value layered real-asset claims end to end; the layer report and risk-map coordinates are the organizing display. **E1** audit the slogan (compute the toll-road pitch's actual risk-map dot); the lease ladder low-passes market rent (g(κℓ) = 0.5677 at ℓ=5, 0.3773 at ℓ=10); the value fan V = NOI/cap shows volatility dominated by the fast denominator; the development option (β=1.406, V*=3.46K) shows the NPV rule forgoing most of land value by building too early.
+
+**Downloads:** [Python notebook](../downloads/ch12_laboratory.ipynb) · [Excel workbook](../downloads/MFAA_Ch12_Laboratory.xlsx) · [Slides](../downloads/MFAA_Ch12_Slides.pptx)
+
+## Exercises
+
+Solutions are distributed to instructors with the Instructor's Solutions Manual; they are not posted here.
+
+### Conceptual Problems
+
+**12.1** Place each asset of Table 12.1 in the layered decomposition (12.1): what is contracted, what re-contracts, and which of the book’s engines (leasing renewal, credit intensity, regime chain, real option) prices each piece?
+
+**12.2** The infrastructure pitch defends “equity-like returns” by citing realized fund IRRs. Using Chapters 8 and 6, list the adjustments (leverage, smoothing, selection, subscription lines) a board should demand before reading those IRRs as asset-level evidence, and state which risk-map coordinate each adjustment moves.
+
+**12.3** Explain why the rent-roll smoothing of Proposition 12.4 is a real deferral of repricing while the appraisal smoothing of Proposition 6.3 is purely informational—and give one decision for which the distinction is first-order (hint: refinancing against NOI covenants).
+
+**12.4** In the opening problem, transactions cleared at 7% while appraisals said 5.25%. Using Chapter 5’s seller-urgency machinery, argue both directions for the sign of transaction-sample selection bias in a frozen market, and identify what additional data would determine it.
+
+### Mathematical Problems
+
+**12.5** Extend Proposition 12.3 to regime-dependent parameters ( 𝑝(𝑍), 𝜈(𝑍)) on a twostate chain: derive the stationary occupancy via the chain’s stationary law and the renewal-reward theorem for Markov-modulated cycles, and exhibit the wrong-way correction relative to using unconditional averages (Proposition 11.5’s identity in leasing form).
+
+**12.6** Derive the variance of cumulative NOI over [0, 𝑇] as a functional of the expiry schedule {𝑡 𝑗 } for OU market rents: show that concentrating expiries strictly increases it for 𝑇 beyond the first cliff, and compute the staggered limit.
+
+**12.7** Complete the monotonicity proof in Proposition 12.4(i): show 𝑧 ↦→ 2(𝑧−1+𝑒 −𝑧 )/𝑧 2 is strictly decreasing on (0, ∞), and derive the maximizing lag in (ii) explicitly for 𝑢 ∈ (0, ℓ).
+
+**12.8** Derive the value of a fixed-term concession paying 𝑝 0 𝑒 𝜋idx 𝑡 𝑄 𝑡 for OU log 𝑄 under a nominal SDF with constant inflation: exhibit the closed form via the OU moment generating function, verify the real/nominal bookkeeping identity, and compute the error from discounting the indexed flow at the nominal rate.
+
+**12.9** (Redevelopment.) Extend Proposition 12.6 to an income-producing underlying: the site currently yields 𝛿𝑉 (so the pricing ODE gains a 𝛿𝑉 term and the drift becomes 𝜌 − 𝛿); derive the modified 𝛽, show the threshold rises with the sacrificed yield, and interpret for demolish-and-rebuild decisions.
+
+### Computational Problems
+
+**12.10** Reproduce Figure 12.2 from the printed seed; then double the mean lease term and report the change in the NOI-fan width, the value-fan width, and the variance decomposition between numerator and denominator.
+
+**12.11** Implement the mark-audit module of E2: generate appraisal and transaction caprate series with specified (𝛼, selection intensity); recover the posterior path of the true cap rate and report coverage across seeds.
+
+**12.12** Build the development module: compute (𝛽, 𝑉 ∗ ) across a (𝜎, 𝜌 − 𝜇) grid, simulate exercise times, and quantify the value lost by the NPV rule as a fraction of land value at each grid point.

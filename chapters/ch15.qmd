@@ -1,0 +1,68 @@
+---
+title: "Chapter 15 · Rough and Non-Markovian Dynamics"
+---
+
+## Chapter at a glance
+
+Some processes are rougher than Brownian motion and carry memory no Markov state can summarize. The chapter builds the Volterra machinery (fractional kernels, exact Gaussian simulation, exponential-sum lifts that recover a Markovian approximation), the Gaussian-Markov criterion that separates exponential from power-law covariances, and the signature transform — the sequence of iterated integrals that plays for paths the role monomials play for numbers, with Chen's identity as its streaming update. Its centerpiece is the identification confound: the smoothing pipeline manufactures hyperbolic memory from short-memory data.
+
+## Learning Outcome Statements
+
+**LOS 15.1** — *Identify the mechanisms that make private-market dynamics historydependent—appraisal anchoring, fundraising and deployment cycles, cumulative contract terms, rough drivers—and classify which are removable by finite state augmentation.*
+
+**LOS 15.2** — *Prove that aggregating heterogeneous exponential smoothers produces hyperbolic (long) memory, and use the result as an identification warning: reported long memory need not be fundamental.*
+
+**LOS 15.3** — *Define stochastic Volterra processes, distinguish kernels that preserve the Markov property from those that destroy it (with proof via the Gaussian–Markov covariance criterion), and simulate both.*
+
+**LOS 15.4** — *State what rough volatility says in public markets, and transplant it to private-market latent dynamics with the evidence-transfer caveats made explicit.*
+
+**LOS 15.5** — *Define path signatures, prove their basic algebra (linear paths, Chen’s identity, reparametrization invariance), and deploy truncated signatures as regression.*
+
+**LOS 15.6** — *Handle irregularly observed NAV streams with signature-based summaries, including lead–lag (Lévy-area) diagnostics between marks and cash flows.*
+
+**LOS 15.7** — *Choose between genuinely non-Markovian machinery and Markovian lifts (sums of exponentials), and state the identifiability limits that sparse, smoothed data.*
+
+
+## Laboratory (book §15.8)
+
+**Module:** Volterra and Signature Engines — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+
+A Volterra simulator and a signature extractor, with the identification confound as the centerpiece. **E1** the confound (match two worlds' reported autocorrelations and test which discriminators separate them); **E2** lift accuracy (approximate the fractional kernel with n exponentials and measure the induced error in an exit value); **E3** signature LSM (price the waterfall carry with polynomial vs signature bases at matched budgets); **E4** the desk's statistic (level-two signatures — the Lévy area — as a screening score for subsequent mark-downs).
+
+**Downloads:** [Python notebook](../downloads/ch15_laboratory.ipynb) · [Excel workbook](../downloads/MFAA_Ch15_Laboratory.xlsx) · [Slides](../downloads/MFAA_Ch15_Slides.pptx)
+
+## Exercises
+
+Solutions are distributed to instructors with the Instructor's Solutions Manual; they are not posted here.
+
+### Conceptual Problems
+
+**15.1** Classify the path dependencies of Section 15.2 (waterfall accrual, covenant history, fundraising lags, appraisal anchoring, rough drivers) by whether finite state augmentation restores the Markov property, and give the augmenting state where it exists.
+
+**15.2** Restate the secondary desk’s two bids in state-variable language: which path functionals plausibly enter its pricing state, and which chapter’s machinery estimates each?
+
+**15.3** Explain why quarterly smoothed marks cannot identify the roughness index 𝐻: which feature of the data does the estimator need, and which does Proposition 6.3 say the pipeline destroys?
+
+**15.4** Interpret self-exciting secondary-market activity (Hawkes intensity) institutionally: what economic mechanisms make one print beget another, and how does the story interact with the threshold clustering of Chapter 13?
+
+### Mathematical Problems
+
+**15.5** Complete Proposition 15.2: for white-noise latent input, derive the index autocovariance 𝛾(𝑘) ∼ 𝑐𝑘 − (2𝑏−1) -type asymptotics in the appropriate regime, show the spectral density blows up at the origin like 𝜆 𝑏−1 for 𝑏 < 1, and identify the boundary case 𝑏 = 1.
+
+**15.6** Complete Proposition 15.3(ii): evaluate the covariance-ratio derivative to exhibit the strict violation for 𝐻 ≠ 12 , and extend the criterion check to fractional Brownian motion via its covariance 12 (𝑡 2𝐻 + 𝑠2𝐻 − |𝑡 − 𝑠| 2𝐻 ).
+
+**15.7** Prove Chen’s identity for piecewise-linear paths directly from Proposition 15.5(i) and associativity of concatenation; verify that time augmentation breaks reparametrization invariance by computing both signatures of a two-speed traversal of the same segment.
+
+**15.8** (Lead–lag.) For 𝑋𝑡 = (sin 𝑡, sin(𝑡 − 𝜙)) on [0, 2𝜋], compute the Lévy area as a function of the phase 𝜙 and confirm its sign identifies the leading coordinate; then compute the area for an idealized fund A (mark-down-and-recover loop) versus fund B (smooth drift, lagged distributions) and reconcile with the desk’s reasoning.
+
+**15.9** (Lift.) Construct an 𝑛-term exponential-sum approximation to 𝐾 𝐻 on [𝛿, 𝑇] with geometrically∫ spaced rates 𝜃 𝑗 ; bound the uniform relative error via the substitution ∞ 𝑢 𝐻 −1/2 = 𝑐 0 𝑒 − 𝜃𝑢 𝜃 −𝐻 −1/2 𝜃 and a quadrature estimate, and state the Hawkes stability (branching ratio) condition for kernels of this class.
+
+### Computational Problems
+
+**15.10** Reproduce Figure 15.2 from the printed seed; report the estimated incrementscaling exponents on the fine grid and after the pipeline, with bootstrap bands.
+
+**15.11** Implement the aggregation demo: panels of 103 smoothers with Beta(𝑎, 𝑏) anchoring for 𝑏 ∈ {0.7, 1, 1.5}; overlay index autocorrelations on the Gamma-ratio prediction and locate the summability boundary empirically.
+
+**15.12** Implement streaming signatures to depth four via Chen updates; price the Chapter 8 carry by LSM with signature and polynomial bases at equal coefficient counts and reproduce the E3 ledger.
+
+**15.13** Design a joint estimator of latent roughness from irregular transaction prints and smoothed marks: a state-space model with a Volterra latent value (lifted to finite factors), the Chapter 6 observation operators for marks, and a point-process observation channel for prints. Analyze identifiability of (𝐻, smoothing parameters) jointly— in particular, which observation channel breaks the Proposition 15.2 confound and at what print intensity—and validate on simulated worlds before proposing the empirical design.
