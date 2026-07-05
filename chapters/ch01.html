@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Chapter 1 · Alternative Assets and the Limits of Classical Financial Engineering – Mathematical Finance of Alternative Assets</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-89e0b2e130be7f0792bf1dcfa2d39495.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Mathematical Finance of Alternative Assets</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://YOUR-LOVABLE-APP-URL"> 
+<span class="menu-text">Open the Laboratory →</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch01.html">Chapters</a></li><li class="breadcrumb-item"><a href="../chapters/ch01.html">Chapter 1 · Alternative Assets and the Limits of Classical Financial Engineering</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mathematical Finance of Alternative Assets</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">15-Week Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory, Notebooks &amp; Workbooks</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Chapters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Chapter 1 · Alternative Assets and the Limits of Classical Financial Engineering</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#chapter-at-a-glance" id="toc-chapter-at-a-glance" class="nav-link active" data-scroll-target="#chapter-at-a-glance">Chapter at a glance</a></li>
+  <li><a href="#learning-outcome-statements" id="toc-learning-outcome-statements" class="nav-link" data-scroll-target="#learning-outcome-statements">Learning Outcome Statements</a></li>
+  <li><a href="#laboratory-book-1.9" id="toc-laboratory-book-1.9" class="nav-link" data-scroll-target="#laboratory-book-1.9">Laboratory (book §1.9)</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a>
+  <ul class="collapse">
+  <li><a href="#conceptual-problems" id="toc-conceptual-problems" class="nav-link" data-scroll-target="#conceptual-problems">Conceptual Problems</a></li>
+  <li><a href="#mathematical-problems" id="toc-mathematical-problems" class="nav-link" data-scroll-target="#mathematical-problems">Mathematical Problems</a></li>
+  <li><a href="#computational-problems" id="toc-computational-problems" class="nav-link" data-scroll-target="#computational-problems">Computational Problems</a></li>
+  <li><a href="#extension-problem" id="toc-extension-problem" class="nav-link" data-scroll-target="#extension-problem">Extension Problem</a></li>
+  <li><a href="#research-problem" id="toc-research-problem" class="nav-link" data-scroll-target="#research-problem">Research Problem</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch01.html">Chapters</a></li><li class="breadcrumb-item"><a href="../chapters/ch01.html">Chapter 1 · Alternative Assets and the Limits of Classical Financial Engineering</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Chapter 1 · Alternative Assets and the Limits of Classical Financial Engineering</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="chapter-at-a-glance" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-at-a-glance">Chapter at a glance</h2>
+<p>The chapter defines an alternative asset as a <strong>stochastic cash-flow claim</strong>, introduces the five classifying properties (A1)–(A5), contrasts traded price systems with non-traded claims, derives the first valuation interval, states the master SDF valuation formula, introduces the two-filtration view of smoothed observation, and hands the reader the book’s first laboratory: the liquidity-adjusted stochastic DCF sandbox, whose output is a valuation <strong>distribution</strong>, not a number.</p>
+</section>
+<section id="learning-outcome-statements" class="level2">
+<h2 class="anchored" data-anchor-id="learning-outcome-statements">Learning Outcome Statements</h2>
+<p><strong>LOS 1.1</strong> — <em>Define an alternative asset as a stochastic cash-flow claim and classify the principal alternative asset classes according to their mathematical features: tradability, observability, cash-flow structure, and horizon.</em></p>
+<p><strong>LOS 1.2</strong> — <em>Formulate the mathematical distinction between a traded price system and a non-traded cash-flow claim, and explain why the gains-from-trade calculus of classical financial engineering does not apply directly to the latter.</em></p>
+<p><strong>LOS 1.3</strong> — <em>Derive, in a one-period setting, the interval of arbitrage-free values for a non-replicable claim, and interpret the interval bounds as super- and sub-replication prices.</em></p>
+<p><strong>LOS 1.4</strong> — <em>Formulate the valuation of a private-market claim under a stochastic discount factor and decompose the resulting expected return into risk-premium components, including an illiquidity component.</em></p>
+<p><strong>LOS 1.5</strong> — <em>Distinguish the full-information filtration from the observed filtration generated by appraisals and transactions, and explain how sparse observation and smoothing distort measured risk.</em></p>
+<p><strong>LOS 1.6</strong> — <em>Evaluate, for a given alternative asset, which of the classical assumptions (completeness, continuous tradability, continuous observation, linear pricing) fail, and identify the mathematical tool developed in this book that addresses each failure.</em></p>
+<p><strong>LOS 1.7</strong> — <em>Simulate a first liquidity-adjusted stochastic discounted cash-flow valuation in the companion webapp and interpret the resulting valuation distribution.</em></p>
+</section>
+<section id="laboratory-book-1.9" class="level2">
+<h2 class="anchored" data-anchor-id="laboratory-book-1.9">Laboratory (book §1.9)</h2>
+<p><strong>Module:</strong> Taxonomy · Cash-Flow Visualization · Liquidity-Adjusted Valuation Sandbox — <a href="https://YOUR-LOVABLE-APP-URL">open in the Laboratory</a></p>
+<p>Suggested experiments <strong>E1–E4</strong> (assignable before any theory): E1 from number to distribution; E2 covariation and premia (vary ρ); E3 liquidity as timing risk (slow ν_{I→Liq}); E4 the opening problem, first pass. Validation checks V1–V4 must accompany every laboratory report.</p>
+<p><strong>Downloads:</strong> <a href="../downloads/ch01_laboratory.html">Python notebook</a> · <a href="../downloads/MFAA_Ch01_Laboratory.xlsx">Excel workbook</a> · <a href="../downloads/MFAA_Ch01_Slides.pptx">Slides</a></p>
+</section>
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+<p>Solutions are distributed to instructors with the Instructor’s Solutions Manual; they are not posted here.</p>
+<section id="conceptual-problems" class="level3">
+<h3 class="anchored" data-anchor-id="conceptual-problems">Conceptual Problems</h3>
+<p><strong>1.1</strong> For each of the following, state which properties (A1)–(A5) of Definition 1.2 hold and which fail, with justification: (a) a listed REIT share; (b) a direct commercialproperty holding; (c) an interval fund holding private credit; (d) a music-royalty stream; (e) a bilateral litigation-finance contract; (f) gold futures.</p>
+<p><strong>1.2</strong> Explain, without formulas, why the value gap between claims (i) and (ii) in Example 1.3 must be random and state dependent rather than a constant percentage, and give two economic states in which the gap should widen.</p>
+<p><strong>1.3</strong> An allocator states: “Private equity has equity-like returns with half the volatility.” Using Section 1.4, identify the measurement errors embedded in this statement and the filtration with respect to which each moment is implicitly computed.</p>
+<p><strong>1.4</strong> A valuation report adds a 300 basis-point illiquidity premium to the discount rate and applies a 15% marketability discount to the terminal value. Using point (ii) of Section 1.7, explain the double-counting risk and propose a discipline for locating the friction in exactly one model component.</p>
+</section>
+<section id="mathematical-problems" class="level3">
+<h3 class="anchored" data-anchor-id="mathematical-problems">Mathematical Problems</h3>
+<p><strong>1.5</strong> Prove that the set Ψ of state-price vectors in Section 1.5 is convex, and that {𝜓 ⊤ 𝑋 : 𝜓 ∈ Ψ} is an interval. Exhibit a market ( 𝑝, 𝐴) with 𝐽 = 3, 𝑑 = 1 and a claim 𝑋 for which the valuation interval has length exceeding 50% of its midpoint.</p>
+<p><strong>1.6</strong> Complete the duality step in the proof of Proposition 1.5: show that the linear program defining 𝜋(𝑋) has dual sup{𝜓 ⊤ 𝑋 : 𝜓 ≥ 0, 𝐴⊤ 𝜓 = 𝑝} and that strong duality applies.</p>
+<p><strong>1.7</strong> In the smoothing model (1.3) with latent log returns i.i.d. with variance 𝜎 2 and 𝜀 𝑛 = 0, compute the variance and first-order autocorrelation of reported returns as functions of 𝛼, and the factor by which a variance estimated from reported returns understates 𝜎 2 .</p>
+<p><strong>1.8</strong> Let 𝑀 be an SDF with 𝑀𝑡 /𝑀𝑡 = −𝑟𝑡 − 𝜆𝑊𝑡 (𝑟, 𝜆 constant) and let the claim pay the single lump sum 𝐶𝑇 = exp(𝜇𝑇 + 𝜎𝑊𝑇 − 12 𝜎 2𝑇) at 𝑇. Compute 0 from (1.6) in closed form and identify the risk premium as a covariation term. Verify that setting 𝜆 = 0 recovers actuarial discounting.</p>
+</section>
+<section id="computational-problems" class="level3">
+<h3 class="anchored" data-anchor-id="computational-problems">Computational Problems</h3>
+<p><strong>1.9</strong> Implement Algorithm 1.9 (or use the webapp module) and reproduce validation checks one and two of Section 1.9. Report Monte Carlo standard errors.</p>
+<p><strong>1.10</strong> Using the sandbox, produce the risk-source decomposition of the valuation distribution for the private-credit template (cash-flow risk, rate risk, timing risk, liquidity risk) and present the results as a table of quantiles. Comment on which risk dominates the left tail.</p>
+<p><strong>1.11</strong> Simulate the smoothing recursion (1.3) on top of a latent geometric Brownian value path for 𝛼 ∈ {0.25, 0.5, 0.75, 1}, estimate reported-return volatility and correlation with a correlated public index, and tabulate the distortion as a function of 𝛼. Research Extensions</p>
+</section>
+<section id="extension-problem" class="level3">
+<h3 class="anchored" data-anchor-id="extension-problem">Extension Problem</h3>
+<p><strong>1.12</strong> The interval of Proposition 1.5 treats all state-price vectors symmetrically. Formulate at least two economically motivated refinements of Ψ (e.g.&nbsp;bounds on the SDF’s variance in the spirit of good-deal restrictions, or factor-structure restrictions) and characterize the resulting narrower valuation intervals in the finite-state model. Anticipates Chapter 7.</p>
+</section>
+<section id="research-problem" class="level3">
+<h3 class="anchored" data-anchor-id="research-problem">Research Problem</h3>
+<p><strong>1.13</strong> Propose a formal definition of “degree of incompleteness” of a market relative to a claim 𝑋 (e.g.&nbsp;via the norm of the projection residual of 𝑋 on the traded span under a suitable inner product) and investigate how the valuation-interval width of Proposition 1.5 scales with it. Chapter Summary This chapter defined the object of the book. An alternative asset is a stochastic cashflow claim (𝐷, 𝜏) living in a market environment characterized by restricted tradability, sparse and smoothed observation, incompleteness, contractual nonlinearity, and endogenous timing (Definitions 1.2 and 1.2). Mathematically, the classical identification of value with replication cost fails because the gains process (1.1) cannot be formed in the claim; valuation must instead be built as an operator on cash-flow processes (Definition 1.3). In the simplest incomplete one-period market, no-arbitrage restricts the value of a non-replicable claim only to an interval whose endpoints are sub- and super-replication prices (Proposition 1.5); selecting a value inside the interval requires preferences, penalized measure families, or discipline on the stochastic discount factor. The SDF</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2026 Samir Asaf · Mathematical Finance of Alternative Assets</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

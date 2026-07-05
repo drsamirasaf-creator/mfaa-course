@@ -1,0 +1,281 @@
+[
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "15-Week Schedule",
+    "section": "",
+    "text": "One chapter per week, with three double-weight weeks where the material warrants it (Chapters 4, 14, 17 spill into review sessions). Each week: two lectures + one laboratory assignment (the chapter’s E1–E4 experiments).\n\n\n\n\n\n\n\n\n\nWeek\nChapter\nTopic\nLaboratory module\n\n\n\n\n1\n1\nAlternative assets and the limits of classical financial engineering\nTaxonomy · LDCF sandbox\n\n\n2\n2\nProbability, processes, and simulation for private markets\nStochastic process & cash-flow simulator\n\n\n3\n3\nNo-arbitrage and incomplete markets\nState prices & pricing bounds\n\n\n4\n4\nStochastic discount factors and premium location\nStochastic DCF engine\n\n\n5\n5\nIlliquidity as constraint\nLiquidity shock simulator\n\n\n6\n6\nFiltering and de-smoothing\nNAV unsmoothing & hidden-value filter\n\n\n7\n7\nNonlinear valuation: indifference, good deals, risk measures\nIndifference pricing engine\n\n\n8\n8\nFund structures and cash-flow modeling · Midterm (Chs. 1–8)\nFund cash-flow engine\n\n\n9\n9\nBuyout valuation: the stochastic LBO\nLBO valuation engine\n\n\n10\n10\nVenture capital: power laws and security design\nVenture portfolio & security engine\n\n\n11\n11\nPrivate credit: default, recovery, covenants\nPrivate credit engine\n\n\n12\n12\nReal assets: real estate and infrastructure\nReal asset cash-flow engine\n\n\n13\n13\nAllocation, replication, and optimal switching\nExposure switchboard\n\n\n14\n14\nOptimal stopping and stochastic control\nOptimal exit solver\n\n\n15\n15–17\nRough dynamics · Malliavin sensitivities · Robust construction (survey + project workshop)\nVolterra/signature · Malliavin · Portfolio suite\n\n\n\nFinal projects due at the end of examination week. Chapters 15–17 are taught in survey form in week 15 for a one-semester course; a two-quarter sequence teaches them in full (one week each).",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Course Foundations",
+      "15-Week Schedule"
+    ]
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Mathematical Finance of Alternative Assets · Graduate Finance · 3 credit hours\nSamir Asaf, PhD, CFA, CMA, CTP, CM&AA",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Course Foundations",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#description",
+    "href": "syllabus.html#description",
+    "title": "Syllabus",
+    "section": "Description",
+    "text": "Description\nA rigorous treatment of the valuation and risk management of alternative assets — private equity, venture capital, private credit, real assets, and infrastructure — built on the mathematics their features actually require: restricted tradability, sparse and noisy observation, unspanned risk, contractual nonlinearity, and controlled timing. The course follows the textbook chapter by chapter, with each week anchored by the corresponding laboratory module.",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Course Foundations",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#materials",
+    "href": "syllabus.html#materials",
+    "title": "Syllabus",
+    "section": "Materials",
+    "text": "Materials\n\nTextbook: Mathematical Finance of Alternative Assets: Illiquidity, Incomplete Markets, and Stochastic Valuation (Springer)\nLaboratory: the companion webapp (all assignments reference its modules)\nPer chapter: lecture slides, a Python notebook, and an Excel workbook",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Course Foundations",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#grading-suggested",
+    "href": "syllabus.html#grading-suggested",
+    "title": "Syllabus",
+    "section": "Grading (suggested)",
+    "text": "Grading (suggested)\n\n\n\n\n\n\n\nComponent\nWeight\n\n\n\n\nProblem sets (6, drawn from end-of-chapter exercises)\n35%\n\n\nLaboratory reports (E1–E4 experiments, validation checks included)\n25%\n\n\nMidterm (Chapters 1–8)\n15%\n\n\nFinal project: value a real alternative asset end-to-end\n25%",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Course Foundations",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#standing-rules-of-the-course",
+    "href": "syllabus.html#standing-rules-of-the-course",
+    "title": "Syllabus",
+    "section": "Standing rules of the course",
+    "text": "Standing rules of the course\n\nReport distributions. A valuation without its dispersion and standard error is incomplete.\nLocate every premium at exactly one address — cash flows, SDF, or valuation operator — and never at two.\nState the filtration. Every reported moment is computed with respect to some information set; say which.\nValidate before you trust. A simulation that has not passed its closed-form anchors is not evidence of anything.",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Course Foundations",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#prerequisites",
+    "href": "syllabus.html#prerequisites",
+    "title": "Syllabus",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nProbability at the level of a first graduate course; asset pricing; comfort with Python. Chapter 2 provides a self-contained refresher.",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Course Foundations",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "labs.html",
+    "href": "labs.html",
+    "title": "Laboratory, Notebooks & Workbooks",
+    "section": "",
+    "text": "Every chapter of the book ends with a Webapp Laboratory section specifying a module: purpose, inputs, outputs, model assumptions, numerical method, suggested experiments (E1–E4), and validation checks. The laboratory implements those sections one-for-one, with the book’s seeds.\nOpen the Laboratory →",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Course Foundations",
+      "Laboratory, Notebooks & Workbooks"
+    ]
+  },
+  {
+    "objectID": "labs.html#the-laboratory-webapp",
+    "href": "labs.html#the-laboratory-webapp",
+    "title": "Laboratory, Notebooks & Workbooks",
+    "section": "",
+    "text": "Every chapter of the book ends with a Webapp Laboratory section specifying a module: purpose, inputs, outputs, model assumptions, numerical method, suggested experiments (E1–E4), and validation checks. The laboratory implements those sections one-for-one, with the book’s seeds.\nOpen the Laboratory →",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Course Foundations",
+      "Laboratory, Notebooks & Workbooks"
+    ]
+  },
+  {
+    "objectID": "labs.html#per-chapter-downloads",
+    "href": "labs.html#per-chapter-downloads",
+    "title": "Laboratory, Notebooks & Workbooks",
+    "section": "Per-chapter downloads",
+    "text": "Per-chapter downloads\nAll three companions run the same Python engine — identical seeds, identical numbers.\n\n\n\nChapter\nNotebook\nExcel workbook\n\n\n\n\n1. Taxonomy · LDCF Sandbox\nipynb\nxlsx\n\n\n2–17\n—\nIn production",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Course Foundations",
+      "Laboratory, Notebooks & Workbooks"
+    ]
+  },
+  {
+    "objectID": "labs.html#reproducibility",
+    "href": "labs.html#reproducibility",
+    "title": "Laboratory, Notebooks & Workbooks",
+    "section": "Reproducibility",
+    "text": "Reproducibility\nSeeds follow the book convention 2026NNNN and are printed in every output. The engine source lives in the mfaa-lab repository; the laboratory’s validation endpoint (/api/chNN/validation) re-runs each chapter’s checks on demand.",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Course Foundations",
+      "Laboratory, Notebooks & Workbooks"
+    ]
+  },
+  {
+    "objectID": "chapters/ch01.html",
+    "href": "chapters/ch01.html",
+    "title": "Chapter 1 · Alternative Assets and the Limits of Classical Financial Engineering",
+    "section": "",
+    "text": "The chapter defines an alternative asset as a stochastic cash-flow claim, introduces the five classifying properties (A1)–(A5), contrasts traded price systems with non-traded claims, derives the first valuation interval, states the master SDF valuation formula, introduces the two-filtration view of smoothed observation, and hands the reader the book’s first laboratory: the liquidity-adjusted stochastic DCF sandbox, whose output is a valuation distribution, not a number.",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Chapters",
+      "Chapter 1 · Alternative Assets and the Limits of Classical Financial Engineering"
+    ]
+  },
+  {
+    "objectID": "chapters/ch01.html#chapter-at-a-glance",
+    "href": "chapters/ch01.html#chapter-at-a-glance",
+    "title": "Chapter 1 · Alternative Assets and the Limits of Classical Financial Engineering",
+    "section": "",
+    "text": "The chapter defines an alternative asset as a stochastic cash-flow claim, introduces the five classifying properties (A1)–(A5), contrasts traded price systems with non-traded claims, derives the first valuation interval, states the master SDF valuation formula, introduces the two-filtration view of smoothed observation, and hands the reader the book’s first laboratory: the liquidity-adjusted stochastic DCF sandbox, whose output is a valuation distribution, not a number.",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Chapters",
+      "Chapter 1 · Alternative Assets and the Limits of Classical Financial Engineering"
+    ]
+  },
+  {
+    "objectID": "chapters/ch01.html#learning-outcome-statements",
+    "href": "chapters/ch01.html#learning-outcome-statements",
+    "title": "Chapter 1 · Alternative Assets and the Limits of Classical Financial Engineering",
+    "section": "Learning Outcome Statements",
+    "text": "Learning Outcome Statements\nLOS 1.1 — Define an alternative asset as a stochastic cash-flow claim and classify the principal alternative asset classes according to their mathematical features: tradability, observability, cash-flow structure, and horizon.\nLOS 1.2 — Formulate the mathematical distinction between a traded price system and a non-traded cash-flow claim, and explain why the gains-from-trade calculus of classical financial engineering does not apply directly to the latter.\nLOS 1.3 — Derive, in a one-period setting, the interval of arbitrage-free values for a non-replicable claim, and interpret the interval bounds as super- and sub-replication prices.\nLOS 1.4 — Formulate the valuation of a private-market claim under a stochastic discount factor and decompose the resulting expected return into risk-premium components, including an illiquidity component.\nLOS 1.5 — Distinguish the full-information filtration from the observed filtration generated by appraisals and transactions, and explain how sparse observation and smoothing distort measured risk.\nLOS 1.6 — Evaluate, for a given alternative asset, which of the classical assumptions (completeness, continuous tradability, continuous observation, linear pricing) fail, and identify the mathematical tool developed in this book that addresses each failure.\nLOS 1.7 — Simulate a first liquidity-adjusted stochastic discounted cash-flow valuation in the companion webapp and interpret the resulting valuation distribution.",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Chapters",
+      "Chapter 1 · Alternative Assets and the Limits of Classical Financial Engineering"
+    ]
+  },
+  {
+    "objectID": "chapters/ch01.html#laboratory-book-1.9",
+    "href": "chapters/ch01.html#laboratory-book-1.9",
+    "title": "Chapter 1 · Alternative Assets and the Limits of Classical Financial Engineering",
+    "section": "Laboratory (book §1.9)",
+    "text": "Laboratory (book §1.9)\nModule: Taxonomy · Cash-Flow Visualization · Liquidity-Adjusted Valuation Sandbox — open in the Laboratory\nSuggested experiments E1–E4 (assignable before any theory): E1 from number to distribution; E2 covariation and premia (vary ρ); E3 liquidity as timing risk (slow ν_{I→Liq}); E4 the opening problem, first pass. Validation checks V1–V4 must accompany every laboratory report.\nDownloads: Python notebook · Excel workbook · Slides",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Chapters",
+      "Chapter 1 · Alternative Assets and the Limits of Classical Financial Engineering"
+    ]
+  },
+  {
+    "objectID": "chapters/ch01.html#exercises",
+    "href": "chapters/ch01.html#exercises",
+    "title": "Chapter 1 · Alternative Assets and the Limits of Classical Financial Engineering",
+    "section": "Exercises",
+    "text": "Exercises\nSolutions are distributed to instructors with the Instructor’s Solutions Manual; they are not posted here.\n\nConceptual Problems\n1.1 For each of the following, state which properties (A1)–(A5) of Definition 1.2 hold and which fail, with justification: (a) a listed REIT share; (b) a direct commercialproperty holding; (c) an interval fund holding private credit; (d) a music-royalty stream; (e) a bilateral litigation-finance contract; (f) gold futures.\n1.2 Explain, without formulas, why the value gap between claims (i) and (ii) in Example 1.3 must be random and state dependent rather than a constant percentage, and give two economic states in which the gap should widen.\n1.3 An allocator states: “Private equity has equity-like returns with half the volatility.” Using Section 1.4, identify the measurement errors embedded in this statement and the filtration with respect to which each moment is implicitly computed.\n1.4 A valuation report adds a 300 basis-point illiquidity premium to the discount rate and applies a 15% marketability discount to the terminal value. Using point (ii) of Section 1.7, explain the double-counting risk and propose a discipline for locating the friction in exactly one model component.\n\n\nMathematical Problems\n1.5 Prove that the set Ψ of state-price vectors in Section 1.5 is convex, and that {𝜓 ⊤ 𝑋 : 𝜓 ∈ Ψ} is an interval. Exhibit a market ( 𝑝, 𝐴) with 𝐽 = 3, 𝑑 = 1 and a claim 𝑋 for which the valuation interval has length exceeding 50% of its midpoint.\n1.6 Complete the duality step in the proof of Proposition 1.5: show that the linear program defining 𝜋(𝑋) has dual sup{𝜓 ⊤ 𝑋 : 𝜓 ≥ 0, 𝐴⊤ 𝜓 = 𝑝} and that strong duality applies.\n1.7 In the smoothing model (1.3) with latent log returns i.i.d. with variance 𝜎 2 and 𝜀 𝑛 = 0, compute the variance and first-order autocorrelation of reported returns as functions of 𝛼, and the factor by which a variance estimated from reported returns understates 𝜎 2 .\n1.8 Let 𝑀 be an SDF with 𝑀𝑡 /𝑀𝑡 = −𝑟𝑡 − 𝜆𝑊𝑡 (𝑟, 𝜆 constant) and let the claim pay the single lump sum 𝐶𝑇 = exp(𝜇𝑇 + 𝜎𝑊𝑇 − 12 𝜎 2𝑇) at 𝑇. Compute 0 from (1.6) in closed form and identify the risk premium as a covariation term. Verify that setting 𝜆 = 0 recovers actuarial discounting.\n\n\nComputational Problems\n1.9 Implement Algorithm 1.9 (or use the webapp module) and reproduce validation checks one and two of Section 1.9. Report Monte Carlo standard errors.\n1.10 Using the sandbox, produce the risk-source decomposition of the valuation distribution for the private-credit template (cash-flow risk, rate risk, timing risk, liquidity risk) and present the results as a table of quantiles. Comment on which risk dominates the left tail.\n1.11 Simulate the smoothing recursion (1.3) on top of a latent geometric Brownian value path for 𝛼 ∈ {0.25, 0.5, 0.75, 1}, estimate reported-return volatility and correlation with a correlated public index, and tabulate the distortion as a function of 𝛼. Research Extensions\n\n\nExtension Problem\n1.12 The interval of Proposition 1.5 treats all state-price vectors symmetrically. Formulate at least two economically motivated refinements of Ψ (e.g. bounds on the SDF’s variance in the spirit of good-deal restrictions, or factor-structure restrictions) and characterize the resulting narrower valuation intervals in the finite-state model. Anticipates Chapter 7.\n\n\nResearch Problem\n1.13 Propose a formal definition of “degree of incompleteness” of a market relative to a claim 𝑋 (e.g. via the norm of the projection residual of 𝑋 on the traded span under a suitable inner product) and investigate how the valuation-interval width of Proposition 1.5 scales with it. Chapter Summary This chapter defined the object of the book. An alternative asset is a stochastic cashflow claim (𝐷, 𝜏) living in a market environment characterized by restricted tradability, sparse and smoothed observation, incompleteness, contractual nonlinearity, and endogenous timing (Definitions 1.2 and 1.2). Mathematically, the classical identification of value with replication cost fails because the gains process (1.1) cannot be formed in the claim; valuation must instead be built as an operator on cash-flow processes (Definition 1.3). In the simplest incomplete one-period market, no-arbitrage restricts the value of a non-replicable claim only to an interval whose endpoints are sub- and super-replication prices (Proposition 1.5); selecting a value inside the interval requires preferences, penalized measure families, or discipline on the stochastic discount factor. The SDF",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Chapters",
+      "Chapter 1 · Alternative Assets and the Limits of Classical Financial Engineering"
+    ]
+  },
+  {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "Lecture Slides",
+    "section": "",
+    "text": "One deck per chapter, built from the instructor’s manual’s teaching maps and Learning Outcome Statements. Decks are faithful to the book: every slide’s claims trace to a chapter section or a manual LOS guide.\n\n\n\nChapter\nDeck\nStatus\n\n\n\n\n1. Alternative Assets and the Limits of Classical Financial Engineering\nPPTX\nAvailable\n\n\n2–17\n—\nIn production",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Course Foundations",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "index.html#why-this-course-exists",
+    "href": "index.html#why-this-course-exists",
+    "title": "Mathematical Finance of Alternative Assets",
+    "section": "Why This Course Exists",
+    "text": "Why This Course Exists\nAlternative assets now hold a large share of institutional capital, yet the mathematics used to value them is largely borrowed from markets where prices are continuous, observation is continuous, and every risk is spanned. None of those assumptions hold for a buyout fund, a bilateral loan, a toll road, or a venture portfolio. This course develops the replacement toolkit: stochastic cash-flow claims, valuation under incompleteness, filtering of smoothed observations, nonlinear pricing operators, optimal stopping and switching, and robust portfolio construction — the seventeen chapters of Mathematical Finance of Alternative Assets.",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Mathematical Finance of Alternative Assets"
+    ]
+  },
+  {
+    "objectID": "index.html#what-you-will-build",
+    "href": "index.html#what-you-will-build",
+    "title": "Mathematical Finance of Alternative Assets",
+    "section": "What You Will Build",
+    "text": "What You Will Build\n\nThe habit of reporting valuation distributions, not point estimates, with the operator stated and every premium located at exactly one address\nA working command of the book’s valuation operators — from the liquidity-adjusted stochastic DCF of Chapter 4 to the entropic robust operators of Chapter 17\nHands-on fluency with the companion laboratory: every chapter has a webapp module, a Python notebook, and an Excel workbook, all producing identical numbers on identical seeds\nVerified computational work: every laboratory module carries the book’s validation checks, and passing them is part of every assignment",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Mathematical Finance of Alternative Assets"
+    ]
+  },
+  {
+    "objectID": "index.html#the-three-companions",
+    "href": "index.html#the-three-companions",
+    "title": "Mathematical Finance of Alternative Assets",
+    "section": "The Three Companions",
+    "text": "The Three Companions\n\n\n\nCompanion\nWhat it is\nWhere\n\n\n\n\nLaboratory webapp\n17 chapter dashboards implementing every Webapp Laboratory section of the book\nOpen the Laboratory\n\n\nPython notebooks\nOne notebook per chapter driving the same engine\nLabs & Downloads\n\n\nExcel workbooks\nOne workbook per chapter, one tab per computational exercise, live formulas + engine values\nLabs & Downloads\n\n\n\nAll three consume the same Python engine with the book’s seeds (2026NNNN), so the numbers agree by construction.",
+    "crumbs": [
+      "Open the Laboratory →",
+      "Mathematical Finance of Alternative Assets"
+    ]
+  },
+  {
+    "objectID": "downloads/ch01_laboratory.html",
+    "href": "downloads/ch01_laboratory.html",
+    "title": "MFAA Chapter 1 Laboratory",
+    "section": "",
+    "text": "Taxonomy, Cash-Flow Visualization, and the Liquidity-Adjusted Valuation Sandbox (book §1.9)\nThis notebook drives the same engine.ch01 module that powers the webapp and the Excel workbook — identical seeds, identical numbers. Laboratory seed: 20260100.\nimport sys, numpy as np, matplotlib.pyplot as plt\nsys.path.insert(0, '..')\nfrom engine import ch01\nfrom engine.ch01 import SandboxParams, template\nfrom dataclasses import replace"
+  },
+  {
+    "objectID": "downloads/ch01_laboratory.html#taxonomy-a1a5",
+    "href": "downloads/ch01_laboratory.html#taxonomy-a1a5",
+    "title": "MFAA Chapter 1 Laboratory",
+    "section": "1. Taxonomy (A1)–(A5)",
+    "text": "1. Taxonomy (A1)–(A5)\nClassify each asset along the five dimensions of Definition 1.2 and read the implied modeling choices.\n\nimport pandas as pd\npd.DataFrame([{**{'asset': a['asset']}, **a['profile'], 'note': a['note']} for a in ch01.TAXONOMY])\n\n\n\n\n\n\n\n\nasset\nA1\nA2\nA3\nA4\nA5\nnote\n\n\n\n\n0\nListed REIT share\nFalse\nFalse\nFalse\nFalse\nFalse\nAll five fail for the share itself: a liquid w...\n\n\n1\nDirect commercial property\nTrue\nTrue\nTrue\nTrue\nTrue\nAll five hold; the smoothing model of Section ...\n\n\n2\nInterval fund (private credit)\nTrue\nTrue\nTrue\nTrue\nFalse\nHybrid: liquidity exists only at periodic wind...\n\n\n3\nMusic-royalty stream\nTrue\nTrue\nTrue\nTrue\nFalse\nCash flows observed on quarterly statements; l...\n\n\n4\nLitigation-finance contract\nTrue\nTrue\nTrue\nTrue\nTrue\nNearest thing to a pure unspanned claim; legal...\n\n\n5\nGold futures\nFalse\nFalse\nFalse\nFalse\nFalse\nClassical asset: the clean negative case.\n\n\n\n\n\n\n\n\nch01.IMPLIED_CHOICES\n\n{'A1': 'liquidity states constrain admissible actions (Chs. 5, 13, 14)',\n 'A2': 'two filtrations; filtering and de-smoothing (Ch. 6)',\n 'A3': 'price bounds, SDF selection, nonlinear operators (Chs. 3, 4, 7)',\n 'A4': 'contractual payoff maps: waterfalls, covenants (Chs. 8-12)',\n 'A5': 'optimal stopping and control (Ch. 14)'}"
+  },
+  {
+    "objectID": "downloads/ch01_laboratory.html#the-ldcf-sandbox-from-number-to-distribution",
+    "href": "downloads/ch01_laboratory.html#the-ldcf-sandbox-from-number-to-distribution",
+    "title": "MFAA Chapter 1 Laboratory",
+    "section": "2. The LDCF sandbox: from number to distribution",
+    "text": "2. The LDCF sandbox: from number to distribution\nBase configuration; the output is a valuation distribution, not a number.\n\np = SandboxParams()   # or template('buyout'), template('private_credit'), ...\nout = ch01.sandbox(p)\nprint(f\"mean {out['mean']:.5f}  se {out['se']:.5f}\")\nout['quantiles']\n\nmean 1.25369  se 0.00841\n\n\n{'q01': 0.27912603234898725,\n 'q05': 0.3940524194387659,\n 'q25': 0.6540933020989765,\n 'q50': 0.9469358156256389,\n 'q75': 1.4204142223294345,\n 'q95': 3.04465658961917,\n 'q99': 5.9496673711501975}\n\n\n\nplt.hist(out['values'], bins=60, color='#1F3864', alpha=.85)\nplt.axvline(out['mean'], color='crimson', label=f\"mean {out['mean']:.3f}\")\nplt.xlabel('discounted value'); plt.ylabel('paths'); plt.legend(); plt.title('Valuation distribution (seed 20260100)');"
+  },
+  {
+    "objectID": "downloads/ch01_laboratory.html#experiments-e1e4-assignable-before-any-theory",
+    "href": "downloads/ch01_laboratory.html#experiments-e1e4-assignable-before-any-theory",
+    "title": "MFAA Chapter 1 Laboratory",
+    "section": "3. Experiments E1–E4 (assignable before any theory)",
+    "text": "3. Experiments E1–E4 (assignable before any theory)\nE1 — From number to distribution. Freeze everything, verify the deterministic DCF, then release risks one at a time.\n\nfor fz, label in [((\"cash\",\"rate\",\"timing\",\"liquidity\"),'deterministic'),\n                  ((\"rate\",\"timing\",\"liquidity\"),'cash-flow risk only'),\n                  ((\"timing\",\"liquidity\"),'+ rate risk'),\n                  ((\"liquidity\",),'+ timing risk'), ((), 'all risks')]:\n    s = ch01.summarize(ch01._simulate(p, frozenset(fz))['values'])\n    print(f\"{label:24s} mean {s['mean']:.4f}  std {s['std']:.4f}  q05 {s['quantiles']['q05']:.4f}  q95 {s['quantiles']['q95']:.4f}\")\n\ndeterministic            mean 1.3557  std 0.0000  q05 1.3557  q95 1.3557\ncash-flow risk only      mean 1.3568  std 0.3265  q05 0.8859  q95 1.9453\n+ rate risk              mean 1.3470  std 1.1134  q05 0.3900  q95 3.3315\n+ timing risk            mean 1.2598  std 1.1860  q05 0.4099  q95 3.0299\nall risks                mean 1.2537  std 1.1898  q05 0.3941  q95 3.0447\n\n\nE2 — Covariation and premia. Vary ρ with λ fixed; the direction of the change in expected value is the covariation argument of §1.7.\n\nfor rho in [-0.6,-0.3,0.0,0.3,0.6]:\n    s = ch01.summarize(ch01._simulate(replace(p, rho=rho, M=8000))['values'])\n    print(f\"rho {rho:+.1f}  mean {s['mean']:.4f}\")\n\nrho -0.6  mean 1.4218\nrho -0.3  mean 1.3590\nrho +0.0  mean 1.3003\nrho +0.3  mean 1.2429\nrho +0.6  mean 1.1863\n\n\nE3 — Liquidity as timing risk. Slow I→Liq and watch the left tail.\n\nfor nu in [3.0, 1.5, 0.75, 0.3]:\n    s = ch01.summarize(ch01._simulate(replace(p, nu_il=nu, M=8000))['values'])\n    print(f\"nu_IL {nu:4.2f}  q05 {s['quantiles']['q05']:.4f}  q01 {s['quantiles']['q01']:.4f}  mean {s['mean']:.4f}\")\n\nnu_IL 3.00  q05 0.4009  q01 0.2807  mean 1.2673\nnu_IL 1.50  q05 0.3882  q01 0.2748  mean 1.2619\nnu_IL 0.75  q05 0.3631  q01 0.2457  mean 1.2493\nnu_IL 0.30  q05 0.2965  q01 0.1783  mean 1.2153\n\n\nE4 — The opening problem, first pass. Configure the buyout template at a residual six-year horizon: at what fraction of the sandbox mean would you transact? Retain your answer for Chapters 6, 7, 13.\n\npb = replace(template('buyout'), T=6.0)\nsb = ch01.sandbox(pb)\nprint(f\"buyout, 6y residual: mean {sb['mean']:.4f}; q25 {sb['quantiles']['q25']:.4f} = {sb['quantiles']['q25']/sb['mean']:.0%} of mean\")\n\nbuyout, 6y residual: mean 0.9680; q25 0.5006 = 52% of mean"
+  },
+  {
+    "objectID": "downloads/ch01_laboratory.html#validation-checks-v1v4",
+    "href": "downloads/ch01_laboratory.html#validation-checks-v1v4",
+    "title": "MFAA Chapter 1 Laboratory",
+    "section": "4. Validation checks V1–V4",
+    "text": "4. Validation checks V1–V4\nA simulation that has not passed its anchors is not evidence of anything (LOS 1.7).\n\nval = ch01.validation_checks()\nfor k, d in val.items():\n    if isinstance(d, dict): print(k, 'PASS' if d['pass_'] else 'FAIL')\nprint('ALL:', val['all_pass'])\n\nV1_deterministic PASS\nV2_lambda0 PASS\nV3_stability PASS\nV4_antithetic PASS\nALL: True"
+  },
+  {
+    "objectID": "downloads/ch01_laboratory.html#risk-source-decomposition-exercise-1.10-and-smoothing-exercises-1.7-1.11",
+    "href": "downloads/ch01_laboratory.html#risk-source-decomposition-exercise-1.10-and-smoothing-exercises-1.7-1.11",
+    "title": "MFAA Chapter 1 Laboratory",
+    "section": "5. Risk-source decomposition (Exercise 1.10) and smoothing (Exercises 1.7, 1.11)",
+    "text": "5. Risk-source decomposition (Exercise 1.10) and smoothing (Exercises 1.7, 1.11)\n\nrows = ch01.risk_decomposition(template('private_credit'), mode='isolated')\npd.DataFrame([{ 'config': r['config'], 'std': r['std'], **(r['quantiles'] or {})} for r in rows])\n\n\n\n\n\n\n\n\nconfig\nstd\nq01\nq05\nq25\nq50\nq75\nq95\nq99\n\n\n\n\n0\nall risks\n0.399917\n0.071619\n0.094570\n0.165618\n0.270453\n0.463367\n1.054202\n1.998970\n\n\n1\ncash risk only\n0.048906\n0.318532\n0.343642\n0.385664\n0.416904\n0.450475\n0.504697\n0.544334\n\n\n2\nrate risk only\n0.215086\n0.147163\n0.188149\n0.278304\n0.373058\n0.510600\n0.832168\n1.180421\n\n\n3\ntiming risk only\n0.240162\n0.095460\n0.109918\n0.187962\n0.323412\n0.529051\n0.930700\n0.930700\n\n\n4\nliquidity risk only\n0.001317\n0.413260\n0.416265\n0.419348\n0.419587\n0.419587\n0.419587\n0.419587\n\n\n5\ninteraction (all-risks std minus sum of isolated)\n-0.105555\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\n\n\n\n\n\n\n\n\nsm = ch01.simulate_smoothing()\nprint(f\"variance ratio {sm['variance_ratio_sample']:.4f} (theory {sm['variance_ratio_theory']:.4f})\")\nprint(f\"rho1           {sm['rho1_sample']:.4f} (theory {sm['rho1_theory']:.4f})\")\nplt.plot(sm['latent'][:200], lw=.8, alpha=.7, label='latent')\nplt.plot(sm['reported'][:200], lw=1.4, label='reported')\nplt.legend(); plt.title('Smoothing recursion (seed 20260111)');\n\nvariance ratio 0.2456 (theory 0.2500)\nrho1           0.5899 (theory 0.6000)"
+  }
+]
