@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Chapter 4 · Stochastic Discount Rates and Private-Market Risk Premia – Mathematical Finance of Alternative Assets</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-89e0b2e130be7f0792bf1dcfa2d39495.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Mathematical Finance of Alternative Assets</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://YOUR-LOVABLE-APP-URL"> 
+<span class="menu-text">Open the Laboratory →</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch01.html">Chapters</a></li><li class="breadcrumb-item"><a href="../chapters/ch04.html">Chapter 4 · Stochastic Discount Rates and Private-Market Risk Premia</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mathematical Finance of Alternative Assets</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">15-Week Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory, Notebooks &amp; Workbooks</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Chapters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 1 · Alternative Assets and the Limits of Classical Financial Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 2 · Probability, Stochastic Processes, and Financial States</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 3 · No-Arbitrage, State Prices, and Incomplete Markets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch04.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Chapter 4 · Stochastic Discount Rates and Private-Market Risk Premia</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5 · Illiquidity and Non-Tradability</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 6 · Sparse Observation, NAV Smoothing, and Filtering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 7 · Nonlinear Valuation: Indifference Prices, Good-Deal Bounds, and Convex Risk Measures</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 8 · Cash-Flow Modeling of Fund Structures</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 9 · Buyout Valuation: The Stochastic LBO</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 10 · Venture Capital: Power Laws, Staged Financing, and Security Design</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 11 · Private Credit: Default, Recovery, and Covenants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 12 · Real Assets: Real Estate and Infrastructure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 13 · From Alternative Assets to Tradable Exposures: Allocation, Replication, and Optimal Switching</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 14 · Optimal Stopping and Stochastic Control</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 15 · Rough and Non-Markovian Dynamics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 16 · Malliavin Calculus and Sensitivity Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch17.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 17 · Robust Valuation, Model Risk, and Alternative-Asset Portfolio Construction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#chapter-at-a-glance" id="toc-chapter-at-a-glance" class="nav-link active" data-scroll-target="#chapter-at-a-glance">Chapter at a glance</a></li>
+  <li><a href="#learning-outcome-statements" id="toc-learning-outcome-statements" class="nav-link" data-scroll-target="#learning-outcome-statements">Learning Outcome Statements</a></li>
+  <li><a href="#laboratory-book-4.9" id="toc-laboratory-book-4.9" class="nav-link" data-scroll-target="#laboratory-book-4.9">Laboratory (book §4.9)</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a>
+  <ul class="collapse">
+  <li><a href="#conceptual-problems" id="toc-conceptual-problems" class="nav-link" data-scroll-target="#conceptual-problems">Conceptual Problems</a></li>
+  <li><a href="#mathematical-problems" id="toc-mathematical-problems" class="nav-link" data-scroll-target="#mathematical-problems">Mathematical Problems</a></li>
+  <li><a href="#computational-problems" id="toc-computational-problems" class="nav-link" data-scroll-target="#computational-problems">Computational Problems</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch01.html">Chapters</a></li><li class="breadcrumb-item"><a href="../chapters/ch04.html">Chapter 4 · Stochastic Discount Rates and Private-Market Risk Premia</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Chapter 4 · Stochastic Discount Rates and Private-Market Risk Premia</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="chapter-at-a-glance" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-at-a-glance">Chapter at a glance</h2>
+<p>The book’s first full valuation engine. The chapter models discount rates as stochastic processes, changes measure by Girsanov, constructs exponential and factor SDFs with the Hansen–Jagannathan bound, enforces the premium-location discipline (each premium at exactly one address), values under regime-switching, and updates premia from sparse deal data by conjugate Bayesian analysis. The signature exercise is a hurdle-rate autopsy: enter a flat rate, and the engine reverse-engineers then replaces its implicit content.</p>
+</section>
+<section id="learning-outcome-statements" class="level2">
+<h2 class="anchored" data-anchor-id="learning-outcome-statements">Learning Outcome Statements</h2>
+<p><strong>LOS 4.1</strong> — <em>Model discount rates as stochastic processes, derive the Vasicek bond-price formula, and explain why long-horizon private cash flows make rate risk a first-order.</em></p>
+<p><strong>LOS 4.2</strong> — <em>Change measure by Girsanov’s theorem, interpret market prices of risk as drift wedges, and apply strict ¶//subjective-measure bookkeeping to private-market.</em></p>
+<p><strong>LOS 4.3</strong> — <em>Construct exponential and factor SDFs, and derive and apply the Hansen– Jagannathan bound as a discipline on any SDF used to mark private claims.</em></p>
+<p><strong>LOS 4.4</strong> — <em>Locate illiquidity, horizon, size, and complexity premia in exactly one of cash flows, SDF, or valuation operator, and detect double counting in a given valuation.</em></p>
+<p><strong>LOS 4.5</strong> — <em>Value cash-flow streams under regime-switching discount rates and prices of risk by solving the associated coupled ODE systems.</em></p>
+<p><strong>LOS 4.6</strong> — <em>Update premium parameters from sparse deal data by conjugate Bayesian analysis and propagate parameter uncertainty into posterior valuation distributions.</em></p>
+<p><strong>LOS 4.7</strong> — <em>Assemble and defend the liquidity-adjusted stochastic DCF operator: state its well-posedness and monotonicity, compute it by Monte Carlo, and validate it against.</em></p>
+</section>
+<section id="laboratory-book-4.9" class="level2">
+<h2 class="anchored" data-anchor-id="laboratory-book-4.9">Laboratory (book §4.9)</h2>
+<p><strong>Module:</strong> Stochastic DCF Engine — <a href="https://YOUR-LOVABLE-APP-URL">open in the Laboratory</a></p>
+<p>The LDCF operator of Theorem 4.8 end to end. <strong>E1</strong> hurdle autopsy (enter 12%, read the decomposition and the distribution the point estimate was hiding); <strong>E2</strong> double-count demonstration (illiquidity as factor-in-M vs friction-in-operator, then both — the single most opinion-changing exercise in Part II); <strong>E3</strong> good-deal narrowing (sweep the Sharpe ceiling); <strong>E4</strong> learning curve (feed deal outcomes into the Bayesian panel).</p>
+<p><strong>Downloads:</strong> <a href="../downloads/ch04_laboratory.html">Python notebook</a> · <a href="../downloads/MFAA_Ch04_Laboratory.xlsx">Excel workbook</a> · <a href="../downloads/MFAA_Ch04_Slides.pptx">Slides</a></p>
+</section>
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+<p>Solutions are distributed to instructors with the Instructor’s Solutions Manual; they are not posted here.</p>
+<section id="conceptual-problems" class="level3">
+<h3 class="anchored" data-anchor-id="conceptual-problems">Conceptual Problems</h3>
+<p><strong>4.1</strong> Rewrite the twelve-percent memo’s methodology sentence in the book’s architecture: list each implicit component, assign it an address per Table 4.1, and label every expectation with its measure per Remark 4.3.</p>
+<p><strong>4.2</strong> A pension consultant reports that “private credit yields 9% against 6% for comparable public bonds, so the illiquidity premium is 3%.” Give three distinct reasons, grounded in Sections 4.5 and 4.7 and in Chapter 1’s smoothing discussion, why the subtraction does not identify a premium, and state what additional objects would need to be estimated.</p>
+<p><strong>4.3</strong> Explain why the good-deal restriction is a statement about (¶) and not about any particular claim, and why it therefore narrows the valuation interval of every nonspanned claim simultaneously. What institutional knowledge does the choice of the ceiling ℎ encode?</p>
+<p><strong>4.4</strong> The GP-skill row of Table 4.1 locates “alpha” in 𝐷 under a subjective measure rather than as a discount-rate reduction. Show by a two-period example that the two treatments give different values for a fund with back-loaded cash flows, and argue which difference is economically correct.</p>
+</section>
+<section id="mathematical-problems" class="level3">
+<h3 class="anchored" data-anchor-id="mathematical-problems">Mathematical Problems</h3>
+<p><strong>4.5</strong> Verify the conditional variance formula in the proof of Proposition 4.2.1 by direct ∫𝑇 computation of ( 𝑡 𝑟 𝑠 𝑠 | 𝑡 ) via the double integral of the OU covariance function, and confirm the yield-curve asymptote − log 𝑃(𝑡, 𝑇)/𝜏 → 𝑟¯ − 𝜎𝑟2 /(2𝑎 2 ) as 𝜏 → ∞.</p>
+<p><strong>4.6</strong> (Duration.) For a deterministic expected cash-flow profile {𝑑 𝑘 } at horizons {𝜏𝑘 } (take the expected Í drawdown/distribution schedule of Exercise 2.10), define the factor duration 𝑘 𝑤 𝑘 𝐵(𝜏𝑘 ) with value weights 𝑤 𝑘 ; compute it for the Chapter 1 fund and compare with the duration of a public-equity index under the same rate model.</p>
+<p><strong>4.7</strong> Derive the HJ bound with a riskless asset absent (bound on 𝜎(𝑀) over the set {e[𝑀 𝑅] = 𝑝} for gross the exponential SDF (4.2) over horizon √︁returns), and show √ Δ has 𝜎(𝑀)/e[𝑀] = 𝑒 ∥𝜆∥ 2 Δ − 1 ≈ ∥𝜆∥ Δ.</p>
+<p><strong>4.8</strong> Extend Proposition 4.6 to (a) a terminal payoff 𝑔𝑖 collected at exit and (b) timedependent horizon 𝑇 &lt; ∞, obtaining the linear ODE system 𝑣′ (𝑡) = (diag(𝑟 𝑖 + 𝜂𝑖 ) − Γ)𝑣(𝑡) − 𝛿 − diag(𝜂𝑖 )𝑔 with 𝑣(𝑇) = 0, and solve it by matrix exponentials. Prove the comparison result: increasing any 𝑟 𝑖 decreases every component of 𝑣.</p>
+<p><strong>4.9</strong> Prove Proposition 4.7 (completion of squares), then extend to unknown 𝜎𝑦2 with a Normal–Inverse-Gamma prior, exhibiting the posterior-predictive 𝑡 distribution and the resulting heavier-tailed posterior valuation distribution.</p>
+</section>
+<section id="computational-problems" class="level3">
+<h3 class="anchored" data-anchor-id="computational-problems">Computational Problems</h3>
+<p><strong>4.10</strong> Implement the LDCF engine (any language) with the validation battery of Section 4.9; reproduce Figure 4.2 from the printed seed and parameters, and report the four-way valuation decomposition for the memo’s deal with Monte Carlo standard errors.</p>
+<p><strong>4.11</strong> Run experiment E3: on a grid of (𝜆 𝑐 , 𝜆𝑟 , 𝜆 𝐿 ) satisfying ∥𝜆∥ ≤ ℎ, compute max/min valuations for the memo’s deal as ℎ varies; plot the good-deal interval against ℎ and mark the two desks of Chapter 3’s opening problem on it.</p>
+<p><strong>4.12</strong> (Wedge estimation.) Simulate a “GP projection” dataset: outcomes generated under ¶, projections generated under a shifted measure with wedge 𝑤; estimate 𝑤 by regression of realized on projected log outcomes and by the Bayesian recursion, and study the sample size at which the wedge is distinguishable from zero at conventional posterior odds. Research Extensions</p>
+<p><strong>4.13</strong> The good-deal ceiling ℎ is itself regime dependent: attainable Sharpe ratios widen in crises. Formulate a regime-modulated good-deal bound (ceiling ℎ(𝑍𝑡 )), characterize the resulting valuation interval dynamics for a long-horizon claim, and design an empirical strategy for calibrating ℎ(·) from traded-market data, discussing identification against the regime-dependent premia of Section 4.6.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/drsamirasaf-creator\.github\.io\/mfaa-course\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2026 Samir Asaf · Mathematical Finance of Alternative Assets</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
