@@ -1,0 +1,150 @@
+/* ============================================================
+   MFAA — landing-page components (hero, cards, grid)
+   Midnight Executive palette
+   ============================================================ */
+
+:root {
+  --mfaa-navy: #1E2761;
+  --mfaa-navy-deep: #161d4a;
+  --mfaa-ice: #CADCFC;
+  --mfaa-ice-soft: #eef3fd;
+  --mfaa-amber: #F2B23E;
+  --mfaa-dark: #22283B;
+  --mfaa-grey: #5A6378;
+}
+
+/* ---- HERO ---- */
+.mfaa-hero {
+  position: relative;
+  margin: -1rem -1rem 2.5rem -1rem;
+  padding: 3.5rem 2.5rem 3rem 2.5rem;
+  background: linear-gradient(120deg, var(--mfaa-navy-deep) 0%, var(--mfaa-navy) 55%, #2b3576 100%);
+  border-radius: 0 0 18px 18px;
+  color: #fff;
+  overflow: hidden;
+}
+.mfaa-hero::after {
+  content: "";
+  position: absolute;
+  right: -60px; top: -60px;
+  width: 320px; height: 320px;
+  background: radial-gradient(circle, rgba(242,178,62,0.18) 0%, rgba(242,178,62,0) 70%);
+  pointer-events: none;
+}
+.mfaa-hero .mfaa-kicker {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--mfaa-ice);
+  margin-bottom: 0.8rem;
+}
+.mfaa-hero h1 {
+  color: #fff !important;
+  border: none !important;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+  margin: 0 0 0.9rem 0;
+  padding: 0;
+  max-width: 780px;
+}
+.mfaa-hero p.mfaa-sub {
+  color: var(--mfaa-ice);
+  font-size: 1.15rem;
+  max-width: 680px;
+  margin-bottom: 1.8rem;
+}
+.mfaa-hero .mfaa-cta {
+  display: inline-block;
+  background: var(--mfaa-amber);
+  color: var(--mfaa-navy-deep) !important;
+  font-weight: 700;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 0 4px 14px rgba(242,178,62,0.35);
+}
+.mfaa-hero .mfaa-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(242,178,62,0.45); }
+.mfaa-hero .mfaa-cta.secondary {
+  background: transparent;
+  color: #fff !important;
+  border: 2px solid var(--mfaa-ice);
+  margin-left: 0.8rem;
+  box-shadow: none;
+}
+.mfaa-hero .mfaa-cta.secondary:hover { background: rgba(255,255,255,0.08); border-color: #fff; }
+
+/* stat strip inside hero */
+.mfaa-stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2.2rem;
+  flex-wrap: wrap;
+}
+.mfaa-stats .stat { display: flex; flex-direction: column; }
+.mfaa-stats .stat .num { font-size: 1.9rem; font-weight: 800; color: var(--mfaa-amber); line-height: 1; }
+.mfaa-stats .stat .lbl { font-size: 0.85rem; color: var(--mfaa-ice); margin-top: 0.3rem; letter-spacing: 0.3px; }
+
+/* ---- FEATURE CARDS ---- */
+.mfaa-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin: 1.8rem 0 2.5rem 0;
+}
+.mfaa-card {
+  background: #fff;
+  border: 1px solid #e2e6ef;
+  border-radius: 12px;
+  padding: 1.4rem 1.4rem 1.5rem 1.4rem;
+  box-shadow: 0 2px 10px rgba(30,39,97,0.06);
+  transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
+  border-top: 4px solid var(--mfaa-navy);
+}
+.mfaa-card:hover { transform: translateY(-4px); box-shadow: 0 10px 26px rgba(30,39,97,0.13); border-top-color: var(--mfaa-amber); }
+.mfaa-card .icon { font-size: 1.6rem; margin-bottom: 0.6rem; }
+.mfaa-card h3 { margin: 0 0 0.5rem 0; color: var(--mfaa-navy); font-size: 1.15rem; }
+.mfaa-card p { color: var(--mfaa-grey); font-size: 0.95rem; margin-bottom: 0.9rem; }
+.mfaa-card a.card-link { color: var(--mfaa-navy); font-weight: 700; font-size: 0.9rem; }
+.mfaa-card a.card-link:hover { color: var(--mfaa-amber); }
+
+/* ---- CHAPTER GRID ---- */
+.mfaa-chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0.8rem;
+  margin: 1.5rem 0 2.5rem 0;
+}
+.mfaa-chapter-grid a {
+  display: block;
+  background: var(--mfaa-ice-soft);
+  border: 1px solid #e2e6ef;
+  border-radius: 9px;
+  padding: 0.8rem 0.95rem;
+  text-decoration: none !important;
+  transition: background 0.12s ease, transform 0.12s ease;
+}
+.mfaa-chapter-grid a:hover { background: var(--mfaa-navy); transform: translateY(-2px); }
+.mfaa-chapter-grid a:hover .ch-num, .mfaa-chapter-grid a:hover .ch-title { color: #fff; }
+.mfaa-chapter-grid .ch-num { display: block; font-size: 0.72rem; font-weight: 700; color: var(--mfaa-amber); letter-spacing: 1px; text-transform: uppercase; }
+.mfaa-chapter-grid .ch-title { display: block; font-size: 0.9rem; font-weight: 600; color: var(--mfaa-dark); margin-top: 0.2rem; line-height: 1.25; }
+
+/* ---- SECTION HEADING for landing ---- */
+.mfaa-section-label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--mfaa-amber);
+  margin: 2.5rem 0 0.3rem 0;
+}
+
+/* responsive hero */
+@media (max-width: 700px) {
+  .mfaa-hero { padding: 2.2rem 1.3rem; }
+  .mfaa-hero h1 { font-size: 1.8rem; }
+  .mfaa-hero .mfaa-cta.secondary { margin-left: 0; margin-top: 0.6rem; }
+}
