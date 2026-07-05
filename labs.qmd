@@ -1,0 +1,29 @@
+---
+title: "Laboratory, Notebooks & Workbooks"
+---
+
+## The Laboratory webapp
+
+Every chapter of the book ends with a **Webapp Laboratory** section
+specifying a module: purpose, inputs, outputs, model assumptions, numerical
+method, suggested experiments (E1–E4), and validation checks. The laboratory
+implements those sections one-for-one, with the book's seeds.
+
+[**Open the Laboratory →**](https://YOUR-LOVABLE-APP-URL)
+
+## Per-chapter downloads
+
+All three companions run the same Python engine — identical seeds, identical
+numbers.
+
+| Chapter | Notebook | Excel workbook |
+|---|---|---|
+| 1. Taxonomy · LDCF Sandbox | [ipynb](downloads/ch01_laboratory.ipynb) | [xlsx](downloads/MFAA_Ch01_Laboratory.xlsx) |
+| 2–17 | — | In production |
+
+## Reproducibility
+
+Seeds follow the book convention `2026NNNN` and are printed in every output.
+The engine source lives in the `mfaa-lab` repository; the laboratory's
+validation endpoint (`/api/chNN/validation`) re-runs each chapter's checks
+on demand.

@@ -1,0 +1,45 @@
+---
+title: "Mathematical Finance of Alternative Assets"
+subtitle: "Illiquidity, Incomplete Markets, and Stochastic Valuation · Graduate Finance Course"
+---
+
+## Course Preview
+
+<!-- Replace VIDEO_ID with your YouTube ID when the introduction videos are ready -->
+{{< video https://www.youtube.com/embed/VIDEO_ID_PREVIEW >}}
+
+## Why This Course Exists
+
+Alternative assets now hold a large share of institutional capital, yet the
+mathematics used to value them is largely borrowed from markets where prices
+are continuous, observation is continuous, and every risk is spanned. None of
+those assumptions hold for a buyout fund, a bilateral loan, a toll road, or a
+venture portfolio. This course develops the replacement toolkit: stochastic
+cash-flow claims, valuation under incompleteness, filtering of smoothed
+observations, nonlinear pricing operators, optimal stopping and switching,
+and robust portfolio construction — the seventeen chapters of *Mathematical
+Finance of Alternative Assets*.
+
+## What You Will Build
+
+- The habit of reporting **valuation distributions**, not point estimates,
+  with the operator stated and every premium located at exactly one address
+- A working command of the book's valuation operators — from the
+  liquidity-adjusted stochastic DCF of Chapter 4 to the entropic robust
+  operators of Chapter 17
+- Hands-on fluency with the **companion laboratory**: every chapter has a
+  webapp module, a Python notebook, and an Excel workbook, all producing
+  identical numbers on identical seeds
+- Verified computational work: every laboratory module carries the book's
+  validation checks, and passing them is part of every assignment
+
+## The Three Companions
+
+| Companion | What it is | Where |
+|---|---|---|
+| **Laboratory webapp** | 17 chapter dashboards implementing every Webapp Laboratory section of the book | [Open the Laboratory](https://YOUR-LOVABLE-APP-URL) |
+| **Python notebooks** | One notebook per chapter driving the same engine | [Labs & Downloads](labs.qmd) |
+| **Excel workbooks** | One workbook per chapter, one tab per computational exercise, live formulas + engine values | [Labs & Downloads](labs.qmd) |
+
+All three consume the same Python engine with the book's seeds
+(`2026NNNN`), so the numbers agree by construction.

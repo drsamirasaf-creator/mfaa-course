@@ -1,0 +1,12 @@
+---
+title: "Lecture Slides"
+---
+
+One deck per chapter, built from the instructor's manual's teaching maps
+and Learning Outcome Statements. Decks are faithful to the book: every
+slide's claims trace to a chapter section or a manual LOS guide.
+
+| Chapter | Deck | Status |
+|---|---|---|
+| 1. Alternative Assets and the Limits of Classical Financial Engineering | [PPTX](downloads/MFAA_Ch01_Slides.pptx) | Available |
+| 2–17 | — | In production |

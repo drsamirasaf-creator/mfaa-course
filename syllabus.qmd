@@ -1,0 +1,49 @@
+---
+title: "Syllabus"
+---
+
+**Mathematical Finance of Alternative Assets** · Graduate Finance · 3 credit hours
+
+*Samir Asaf, PhD, CFA, CMA, CTP, CM&AA*
+
+## Description
+
+A rigorous treatment of the valuation and risk management of alternative
+assets — private equity, venture capital, private credit, real assets, and
+infrastructure — built on the mathematics their features actually require:
+restricted tradability, sparse and noisy observation, unspanned risk,
+contractual nonlinearity, and controlled timing. The course follows the
+textbook chapter by chapter, with each week anchored by the corresponding
+laboratory module.
+
+## Materials
+
+- **Textbook**: *Mathematical Finance of Alternative Assets: Illiquidity,
+  Incomplete Markets, and Stochastic Valuation* (Springer)
+- **Laboratory**: the companion webapp (all assignments reference its modules)
+- **Per chapter**: lecture slides, a Python notebook, and an Excel workbook
+
+## Grading (suggested)
+
+| Component | Weight |
+|---|---|
+| Problem sets (6, drawn from end-of-chapter exercises) | 35% |
+| Laboratory reports (E1–E4 experiments, validation checks included) | 25% |
+| Midterm (Chapters 1–8) | 15% |
+| Final project: value a real alternative asset end-to-end | 25% |
+
+## Standing rules of the course
+
+1. **Report distributions.** A valuation without its dispersion and standard
+   error is incomplete.
+2. **Locate every premium** at exactly one address — cash flows, SDF, or
+   valuation operator — and never at two.
+3. **State the filtration.** Every reported moment is computed with respect
+   to some information set; say which.
+4. **Validate before you trust.** A simulation that has not passed its
+   closed-form anchors is not evidence of anything.
+
+## Prerequisites
+
+Probability at the level of a first graduate course; asset pricing;
+comfort with Python. Chapter 2 provides a self-contained refresher.

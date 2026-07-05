@@ -1,0 +1,29 @@
+---
+title: "15-Week Schedule"
+---
+
+One chapter per week, with three double-weight weeks where the material
+warrants it (Chapters 4, 14, 17 spill into review sessions). Each week:
+two lectures + one laboratory assignment (the chapter's E1–E4 experiments).
+
+| Week | Chapter | Topic | Laboratory module |
+|---|---|---|---|
+| 1 | 1 | Alternative assets and the limits of classical financial engineering | Taxonomy · LDCF sandbox |
+| 2 | 2 | Probability, processes, and simulation for private markets | Stochastic process & cash-flow simulator |
+| 3 | 3 | No-arbitrage and incomplete markets | State prices & pricing bounds |
+| 4 | 4 | Stochastic discount factors and premium location | Stochastic DCF engine |
+| 5 | 5 | Illiquidity as constraint | Liquidity shock simulator |
+| 6 | 6 | Filtering and de-smoothing | NAV unsmoothing & hidden-value filter |
+| 7 | 7 | Nonlinear valuation: indifference, good deals, risk measures | Indifference pricing engine |
+| 8 | 8 | Fund structures and cash-flow modeling · **Midterm (Chs. 1–8)** | Fund cash-flow engine |
+| 9 | 9 | Buyout valuation: the stochastic LBO | LBO valuation engine |
+| 10 | 10 | Venture capital: power laws and security design | Venture portfolio & security engine |
+| 11 | 11 | Private credit: default, recovery, covenants | Private credit engine |
+| 12 | 12 | Real assets: real estate and infrastructure | Real asset cash-flow engine |
+| 13 | 13 | Allocation, replication, and optimal switching | Exposure switchboard |
+| 14 | 14 | Optimal stopping and stochastic control | Optimal exit solver |
+| 15 | 15–17 | Rough dynamics · Malliavin sensitivities · Robust construction (survey + project workshop) | Volterra/signature · Malliavin · Portfolio suite |
+
+Final projects due at the end of examination week. Chapters 15–17 are
+taught in survey form in week 15 for a one-semester course; a two-quarter
+sequence teaches them in full (one week each).

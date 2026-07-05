@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Mathematical Finance of Alternative Assets"
+  description: "Graduate course companion: illiquidity, incomplete markets, and stochastic valuation"
+  navbar:
+    right:
+      - text: "Open the Laboratory →"
+        href: "https://YOUR-LOVABLE-APP-URL"
+  sidebar:
+    style: docked
+    search: true
+    contents:
+      - index.qmd
+      - section: "Course Foundations"
+        contents: [syllabus.qmd, schedule.qmd, slides.qmd, labs.qmd]
+      - section: "Chapters"
+        contents:
+          - chapters/ch01.qmd
+  page-footer:
+    center: "© 2026 Samir Asaf · Mathematical Finance of Alternative Assets"
+
+format:
+  html:
+    theme: [cosmo]
+    toc: true
+    number-sections: false
