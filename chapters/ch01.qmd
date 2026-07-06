@@ -25,7 +25,7 @@ The chapter defines an alternative asset as a **stochastic cash-flow claim**, in
 
 ## Laboratory (book §1.9)
 
-**Module:** Taxonomy · Cash-Flow Visualization · Liquidity-Adjusted Valuation Sandbox — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+**Module:** Taxonomy · Cash-Flow Visualization · Liquidity-Adjusted Valuation Sandbox — [open in the Laboratory](https://mathematicalfinance.app)
 
 Suggested experiments **E1–E4** (assignable before any theory): E1 from number to distribution; E2 covariation and premia (vary ρ); E3 liquidity as timing risk (slow ν_{I→Liq}); E4 the opening problem, first pass. Validation checks V1–V4 must accompany every laboratory report.
 

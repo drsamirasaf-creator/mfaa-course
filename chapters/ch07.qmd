@@ -25,7 +25,7 @@ When a claim is unspanned, linear pricing fails and holder-relevant valuation mu
 
 ## Laboratory (book §7.9)
 
-**Module:** Indifference Pricing Engine — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+**Module:** Indifference Pricing Engine — [open in the Laboratory](https://mathematicalfinance.app)
 
 Price unspanned claims with the full nonlinear toolkit side by side. The organizing display is the operator ladder: for one claim, the no-arbitrage interval, the good-deal interval inside it, the [p_b, p_s] indifference pair inside that, and the Davis point they straddle. **E1** hedgeable-fraction sweep (watch the indifference band collapse onto replication); the buyer–seller gap is a variance bill γσ_e²q²/R; only the residual variance is charged.
 

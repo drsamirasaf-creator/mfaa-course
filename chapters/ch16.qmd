@@ -25,7 +25,7 @@ Malliavin calculus turns the computation of Greeks from repeated re-simulation i
 
 ## Laboratory (book §16.8)
 
-**Module:** Malliavin Sensitivity Engine — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+**Module:** Malliavin Sensitivity Engine — [open in the Laboratory](https://mathematicalfinance.app)
 
 A sensitivity layer over every engine: Greeks with error bars, estimator diagnostics, and the hedging projection. **E1** the committee's morning (rate duration and carry vega, bump vs weight at equal compute); **E2** kink stress (watch bump variance explode near a hurdle while the localized weight holds its error bars); **E3** hedge the fund (compute the Clark-Ocone projection φ*, hedge at monthly rebalancing, match the residual to the floor 0.0992); **E4** envelope theater (confirm the zero first-order effect of bumping an optimal boundary).
 

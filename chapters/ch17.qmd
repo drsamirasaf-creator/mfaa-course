@@ -25,7 +25,7 @@ The book's capstone assembles every prior engine into one cockpit. Robust valuat
 
 ## Laboratory (book §17.10)
 
-**Module:** Portfolio Construction Suite — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+**Module:** Portfolio Construction Suite — [open in the Laboratory](https://mathematicalfinance.app)
 
 The book's cockpit: robust optimizer, pacing corridor, band-governance with the phantom-breach demonstration, liquidity budget, reverse-stress tilt finder. **E1** survive the quarter (replay the opening problem across 2,000 drawdowns, naive vs robust); **E2** the price of the print (reported vs filtered triggers — the fraction of sales that de-smoothed accounting phantoms, and the t* lag); **E3** ambiguity sweep (which asset shrinks first as ambiguity rises); **E4** break the program (reverse-stress the flagship, name the first constraint to fail, redesign one dial). The phantom breach peaks at t* ≈ 10 months, when the true deviation has resolved to 20%.
 

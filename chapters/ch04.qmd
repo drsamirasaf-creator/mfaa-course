@@ -25,7 +25,7 @@ The book's first full valuation engine. The chapter models discount rates as sto
 
 ## Laboratory (book §4.9)
 
-**Module:** Stochastic DCF Engine — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+**Module:** Stochastic DCF Engine — [open in the Laboratory](https://mathematicalfinance.app)
 
 The LDCF operator of Theorem 4.8 end to end. **E1** hurdle autopsy (enter 12%, read the decomposition and the distribution the point estimate was hiding); **E2** double-count demonstration (illiquidity as factor-in-M vs friction-in-operator, then both — the single most opinion-changing exercise in Part II); **E3** good-deal narrowing (sweep the Sharpe ceiling); **E4** learning curve (feed deal outcomes into the Bayesian panel).
 

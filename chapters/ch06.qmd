@@ -25,7 +25,7 @@ The book's measurement chapter. Private-asset value is latent; what is observed 
 
 ## Laboratory (book §6.9)
 
-**Module:** NAV Unsmoothing and Hidden-Value Reconstruction — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+**Module:** NAV Unsmoothing and Hidden-Value Reconstruction — [open in the Laboratory](https://mathematicalfinance.app)
 
 Reconstruct latent value by Kalman and particle filtering with joint parameter estimation; report marks as posterior distributions. **E1** recover the truth (coverage calibration over repeated seeds); **E2** reproduce the committee (the three volatilities — reported, reconstructed, proxy — and the factor-of-two); **E3** the kink (Kalman vs particle around a carry threshold); **E4** overcorrection stress (naive Geltner inversion with a misestimated α̂ manufacturing volatility).
 

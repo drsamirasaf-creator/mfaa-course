@@ -25,7 +25,7 @@ Venture returns are governed by power laws, not the bell curve, and value flows 
 
 ## Laboratory (book §10.8)
 
-**Module:** Venture Portfolio and Security Engine — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+**Module:** Venture Portfolio and Security Engine — [open in the Laboratory](https://mathematicalfinance.app)
 
 Three coupled modules with the two-marks panel as its organizing display. **E1** tail-index sensitivity (sweep α, track fund-multiple dispersion and P(return the fund) — where Gaussian intuition fails); **E2** reserves versus shots (allocate between more initial checks and deeper reserves); **E3** the down-round exit (build a senior participating stack, exit at 0.6× the headline, report each class's recovery); **E4** skilled or lucky (locate a 4.1× fund in the luck distribution; how many consecutive funds shift the posterior to 9:1 for skill).
 

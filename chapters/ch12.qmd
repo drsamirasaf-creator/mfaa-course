@@ -25,7 +25,7 @@ Real-asset value has a slow numerator and a fast denominator: contracted rent ro
 
 ## Laboratory (book §12.9)
 
-**Module:** Real Asset Cash-Flow Engine — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+**Module:** Real Asset Cash-Flow Engine — [open in the Laboratory](https://mathematicalfinance.app)
 
 Value layered real-asset claims end to end; the layer report and risk-map coordinates are the organizing display. **E1** audit the slogan (compute the toll-road pitch's actual risk-map dot); the lease ladder low-passes market rent (g(κℓ) = 0.5677 at ℓ=5, 0.3773 at ℓ=10); the value fan V = NOI/cap shows volatility dominated by the fast denominator; the development option (β=1.406, V*=3.46K) shows the NPV rule forgoing most of land value by building too early.
 

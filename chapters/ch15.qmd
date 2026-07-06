@@ -25,7 +25,7 @@ Some processes are rougher than Brownian motion and carry memory no Markov state
 
 ## Laboratory (book §15.8)
 
-**Module:** Volterra and Signature Engines — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+**Module:** Volterra and Signature Engines — [open in the Laboratory](https://mathematicalfinance.app)
 
 A Volterra simulator and a signature extractor, with the identification confound as the centerpiece. **E1** the confound (match two worlds' reported autocorrelations and test which discriminators separate them); **E2** lift accuracy (approximate the fractional kernel with n exponentials and measure the induced error in an exit value); **E3** signature LSM (price the waterfall carry with polynomial vs signature bases at matched budgets); **E4** the desk's statistic (level-two signatures — the Lévy area — as a screening score for subsequent mark-downs).
 

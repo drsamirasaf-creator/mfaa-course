@@ -9,7 +9,7 @@ specifying a module: purpose, inputs, outputs, model assumptions, numerical
 method, suggested experiments (E1–E4), and validation checks. The laboratory
 implements those sections one-for-one, with the book's seeds.
 
-[**Open the Laboratory →**](https://YOUR-LOVABLE-APP-URL)
+[**Open the Laboratory →**](https://mathematicalfinance.app)
 
 ## Per-chapter downloads
 

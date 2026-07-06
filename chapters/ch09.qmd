@@ -25,7 +25,7 @@ The opening problem's deterministic spreadsheet, rebuilt with distributions. The
 
 ## Laboratory (book §9.9)
 
-**Module:** LBO Valuation Engine — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+**Module:** LBO Valuation Engine — [open in the Laboratory](https://mathematicalfinance.app)
 
 A stochastic deal model with the committee panel as its organizing display. **E1** answer the committee (mean, median, impairment probability, and the percentile at which the deterministic 16% sits); **E2** the leverage frontier (equity value, impairment, breach, GP carry, and LP net value across entry leverage — mark where the GP and LP optima diverge); **E3** sell into strength (optimal exit vs fixed year-five across regime persistence); **E4** the stochastic value bridge (spanned vs unspanned value creation at the team's declared operational wedge).
 

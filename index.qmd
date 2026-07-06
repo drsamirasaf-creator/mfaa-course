@@ -1,45 +1,109 @@
 ---
-title: "Mathematical Finance of Alternative Assets"
-subtitle: "Illiquidity, Incomplete Markets, and Stochastic Valuation · Graduate Finance Course"
+title: ""
+pagetitle: "Mathematical Finance of Alternative Assets"
+page-layout: full
+toc: false
 ---
 
-## Course Preview
+::: {.mfaa-hero}
+::: {.mfaa-kicker}
+Graduate Finance · Illiquidity, Incomplete Markets, Stochastic Valuation
+:::
+# Mathematical Finance of Alternative Assets
 
-<!-- Replace VIDEO_ID with your YouTube ID when the introduction videos are ready -->
-{{< video https://www.youtube.com/embed/VIDEO_ID_PREVIEW >}}
+::: {.mfaa-sub}
+The replacement toolkit for valuing what classical financial engineering can't: buyout funds, private credit, real assets, and venture portfolios — priced with distributions, not point estimates.
+:::
 
-## Why This Course Exists
+[Open the Laboratory →](https://mathematicalfinance.app){.mfaa-cta}
+[Browse the Chapters](#chapters){.mfaa-cta .secondary}
 
-Alternative assets now hold a large share of institutional capital, yet the
-mathematics used to value them is largely borrowed from markets where prices
-are continuous, observation is continuous, and every risk is spanned. None of
-those assumptions hold for a buyout fund, a bilateral loan, a toll road, or a
-venture portfolio. This course develops the replacement toolkit: stochastic
-cash-flow claims, valuation under incompleteness, filtering of smoothed
-observations, nonlinear pricing operators, optimal stopping and switching,
-and robust portfolio construction — the seventeen chapters of *Mathematical
-Finance of Alternative Assets*.
+::: {.mfaa-stats}
+::: {.stat}
+[17]{.num}
+[Chapters]{.lbl}
+:::
+::: {.stat}
+[17]{.num}
+[Lab Engines]{.lbl}
+:::
+::: {.stat}
+[42]{.num}
+[Figures]{.lbl}
+:::
+::: {.stat}
+[3]{.num}
+[Companions]{.lbl}
+:::
+:::
+:::
 
-## What You Will Build
+## Why this course exists
 
-- The habit of reporting **valuation distributions**, not point estimates,
-  with the operator stated and every premium located at exactly one address
-- A working command of the book's valuation operators — from the
-  liquidity-adjusted stochastic DCF of Chapter 4 to the entropic robust
-  operators of Chapter 17
-- Hands-on fluency with the **companion laboratory**: every chapter has a
-  webapp module, a Python notebook, and an Excel workbook, all producing
-  identical numbers on identical seeds
-- Verified computational work: every laboratory module carries the book's
-  validation checks, and passing them is part of every assignment
+Alternative assets now hold a large share of institutional capital, yet the mathematics used to value them is largely borrowed from markets where prices are continuous, observation is continuous, and every risk is spanned. None of those assumptions hold for a buyout fund, a bilateral loan, a toll road, or a venture portfolio. This course develops the replacement toolkit: stochastic cash-flow claims, valuation under incompleteness, filtering of smoothed observations, nonlinear pricing operators, optimal stopping and switching, and robust portfolio construction — the seventeen chapters of *Mathematical Finance of Alternative Assets*.
 
-## The Three Companions
+[The Three Companions]{.mfaa-section-label}
 
-| Companion | What it is | Where |
-|---|---|---|
-| **Laboratory webapp** | 17 chapter dashboards implementing every Webapp Laboratory section of the book | [Open the Laboratory](https://YOUR-LOVABLE-APP-URL) |
-| **Python notebooks** | One notebook per chapter driving the same engine | [Labs & Downloads](labs.qmd) |
-| **Excel workbooks** | One workbook per chapter, one tab per computational exercise, live formulas + engine values | [Labs & Downloads](labs.qmd) |
+## One engine, three ways to use it
 
-All three consume the same Python engine with the book's seeds
-(`2026NNNN`), so the numbers agree by construction.
+::: {.mfaa-cards}
+::: {.mfaa-card}
+[▦]{.icon}
+
+### Laboratory Webapp
+17 chapter dashboards implementing every Webapp Laboratory section of the book — interactive, seeded, and validated.
+
+[Open the Laboratory →](https://mathematicalfinance.app){.card-link}
+:::
+
+::: {.mfaa-card}
+[◈]{.icon}
+
+### Python Notebooks
+One notebook per chapter driving the same engine, with the book's validation checks built in.
+
+[Labs & Downloads →](labs.qmd){.card-link}
+:::
+
+::: {.mfaa-card}
+[▤]{.icon}
+
+### Excel Workbooks
+One workbook per chapter, one tab per computational exercise — live formulas beside engine values.
+
+[Labs & Downloads →](labs.qmd){.card-link}
+:::
+:::
+
+All three consume the same Python engine with the book's seeds (`2026NNNN`), so the numbers agree by construction.
+
+## What you will build
+
+- The habit of reporting **valuation distributions**, not point estimates, with the operator stated and every premium located at exactly one address
+- A working command of the book's valuation operators — from the liquidity-adjusted stochastic DCF of Chapter 4 to the entropic robust operators of Chapter 17
+- Hands-on fluency with the **companion laboratory**: every chapter has a webapp module, a Python notebook, and an Excel workbook, all producing identical numbers on identical seeds
+- Verified computational work: every laboratory module carries the book's validation checks, and passing them is part of every assignment
+
+## Chapters {#chapters}
+
+[The Seventeen Chapters]{.mfaa-section-label}
+
+::: {.mfaa-chapter-grid}
+[[Chapter 1]{.ch-num}[Alternative Assets & the Limits of Classical Engineering]{.ch-title}](chapters/ch01.qmd)
+[[Chapter 2]{.ch-num}[Stochastic Processes & Cash-Flow Simulation]{.ch-title}](chapters/ch02.qmd)
+[[Chapter 3]{.ch-num}[State Prices & Pricing Bounds]{.ch-title}](chapters/ch03.qmd)
+[[Chapter 4]{.ch-num}[The Stochastic DCF Engine]{.ch-title}](chapters/ch04.qmd)
+[[Chapter 5]{.ch-num}[Liquidity Shocks & Secondary Discounts]{.ch-title}](chapters/ch05.qmd)
+[[Chapter 6]{.ch-num}[NAV Unsmoothing & Filtering]{.ch-title}](chapters/ch06.qmd)
+[[Chapter 7]{.ch-num}[Indifference Pricing & Good-Deal Bounds]{.ch-title}](chapters/ch07.qmd)
+[[Chapter 8]{.ch-num}[Cash-Flow Modeling of Fund Structures]{.ch-title}](chapters/ch08.qmd)
+[[Chapter 9]{.ch-num}[Buyout Valuation: The Stochastic LBO]{.ch-title}](chapters/ch09.qmd)
+[[Chapter 10]{.ch-num}[Venture Capital: Power Laws & Security Design]{.ch-title}](chapters/ch10.qmd)
+[[Chapter 11]{.ch-num}[Private Credit: Default, Recovery, Covenants]{.ch-title}](chapters/ch11.qmd)
+[[Chapter 12]{.ch-num}[Real Assets: Real Estate & Infrastructure]{.ch-title}](chapters/ch12.qmd)
+[[Chapter 13]{.ch-num}[From Alternative Assets to Tradable Exposures]{.ch-title}](chapters/ch13.qmd)
+[[Chapter 14]{.ch-num}[Optimal Stopping & Stochastic Control]{.ch-title}](chapters/ch14.qmd)
+[[Chapter 15]{.ch-num}[Rough & Non-Markovian Dynamics]{.ch-title}](chapters/ch15.qmd)
+[[Chapter 16]{.ch-num}[Malliavin Calculus & Sensitivity Analysis]{.ch-title}](chapters/ch16.qmd)
+[[Chapter 17]{.ch-num}[Robust Valuation & Portfolio Construction]{.ch-title}](chapters/ch17.qmd)
+:::

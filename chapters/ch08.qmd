@@ -25,7 +25,7 @@ The chapter supplies the contractual layer: a fund interest is not a fraction of
 
 ## Laboratory (book §8.9)
 
-**Module:** Fund Cash-Flow Engine — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+**Module:** Fund Cash-Flow Engine — [open in the Laboratory](https://mathematicalfinance.app)
 
 Generate portfolio paths, push them through calls, fees, and an exactly tier-tracked waterfall, and report the LP's world. **E1** fee anatomy (decompose the J-curve trough); **E2** the price of a clause (European vs American, plus clawback); **E3** manufacture an IRR (subscription line shifts IRR right while PME stands still); **E4** the 82% verdict (breakeven on reported vs filtered NAV, reconciled with the Chapter 5 seller).
 

@@ -25,7 +25,7 @@ Alternative assets can be reframed as tradable exposures: each edge of the alloc
 
 ## Laboratory (book §13.10)
 
-**Module:** Exposure Switchboard — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+**Module:** Exposure Switchboard — [open in the Laboratory](https://mathematicalfinance.app)
 
 The allocation cockpit: price every edge of the exposure graph and return the policy map. **E1** the CIO's quarter (produce the policy map and recommended sequencing for the opening problem, with realized-cost distributions vs naive policies); **E2** basis honesty (proxy betas on raw vs de-smoothed series — the overlay undersizing the raw estimates cause); **E3** hysteresis anatomy (the option value of the overlay edge as a function of the stress discount); **E4** tails have no twin (compute W₁ and the quantile map, and verify the transport budget of Proposition 13.8).
 

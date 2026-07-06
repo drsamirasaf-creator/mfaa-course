@@ -25,7 +25,7 @@ The chapter builds the probabilistic substrate for everything that follows: filt
 
 ## Laboratory (book §2.9)
 
-**Module:** Stochastic Process and Cash-Flow Simulator — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+**Module:** Stochastic Process and Cash-Flow Simulator — [open in the Laboratory](https://mathematicalfinance.app)
 
 Simulate the drivers, assemble undiscounted cash-flow paths, and make the two-filtration distinction visible by downsampling and smoothing simulated paths. **E1** scheme error (Euler vs exact; slopes ≈ ½ and ≈ 1); **E2** intensity shape (calibrate the capital-call age profile, Exercise 2.10); **E3** two filtrations (Exercise 2.11 — watch reported volatility fall and autocorrelation rise as α grows); **E4** tail of marks (lognormal vs Pareto).
 

@@ -25,7 +25,7 @@ Illiquidity ceases to be a premium bolted onto a discount rate and becomes a con
 
 ## Laboratory (book §5.9)
 
-**Module:** Liquidity Shock Simulator — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+**Module:** Liquidity Shock Simulator — [open in the Laboratory](https://mathematicalfinance.app)
 
 Manage an illiquid position through simulated liquidity cycles and funding shocks; watch realizable value diverge from fundamental value and price the divergence with L. **E1** replay the fading bid (decompose the discount into urgency and state-transition effects); **E2** option value of waiting (sweep the threshold policy, locate the interior optimum, watch precautionary behavior emerge); **E3** depth versus urgency (iso-discount curves); **E4** tail pricing (the variance-finiteness boundary of the holding-period proposition).
 

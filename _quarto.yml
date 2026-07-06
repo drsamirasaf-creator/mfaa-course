@@ -8,7 +8,7 @@ website:
   navbar:
     right:
       - text: "Open the Laboratory →"
-        href: "https://YOUR-LOVABLE-APP-URL"
+        href: "https://mathematicalfinance.app"
   sidebar:
     style: docked
     search: true
@@ -36,10 +36,22 @@ website:
           - chapters/ch16.qmd
           - chapters/ch17.qmd
   page-footer:
-    center: "© 2026 Samir Asaf · Mathematical Finance of Alternative Assets"
+    background: light
+    left: "© 2026 Samir Asaf · *Mathematical Finance of Alternative Assets*"
+    center: "Illiquidity · Incomplete Markets · Stochastic Valuation"
+    right:
+      - text: "Laboratory"
+        href: "https://mathematicalfinance.app"
+      - text: "Syllabus"
+        href: "syllabus.qmd"
+      - text: "Labs & Downloads"
+        href: "labs.qmd"
 
 format:
   html:
-    theme: [cosmo]
+    theme: [cosmo, theme.scss]
+    css: styles.css
     toc: true
     number-sections: false
+    grid:
+      body-width: 950px

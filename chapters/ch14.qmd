@@ -25,7 +25,7 @@ This chapter is the book's decision engine. The dynamic programming principle ge
 
 ## Laboratory (book §14.9)
 
-**Module:** Optimal Exit Solver — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+**Module:** Optimal Exit Solver — [open in the Laboratory](https://mathematicalfinance.app)
 
 A general solver for stopping, switching, and constrained problems, with the verification checklist as a certification layer. **E1** four memos, one map (solve the opening problem's three-mode, two-obstacle program and identify each verb's optimal region); **E2** certification theater (feed the solver a corrupted candidate and watch the verification report localize the failure, then repair by projection and re-certify). The development option (V* = 2.366K) is the closed-form audit case; the grid solution matches it to ~2e-3 in sup norm.
 

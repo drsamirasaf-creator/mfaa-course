@@ -1,0 +1,170 @@
+/*-- scss:defaults --*/
+// ============================================================
+// MFAA — Midnight Executive theme
+// Matches the lecture decks: navy / ice / amber
+// ============================================================
+
+// Palette
+$navy:        #1E2761;   // primary
+$navy-deep:   #161d4a;   // darker navy for gradients
+$ice:         #CADCFC;   // light accent
+$ice-soft:    #eef3fd;   // very light background wash
+$amber:       #F2B23E;   // accent / highlights
+$amber-deep:  #d99a20;
+$dark:        #22283B;   // body text
+$grey:        #5A6378;   // muted text
+$grey-line:   #e2e6ef;   // hairlines
+$white:       #ffffff;
+
+// Bootstrap variable overrides
+$primary:       $navy;
+$secondary:     $grey;
+$body-color:    $dark;
+$body-bg:       $white;
+$link-color:    $navy;
+$link-hover-color: $amber-deep;
+$border-color:  $grey-line;
+
+// Typography — Arial-like sans throughout (matches decks)
+$font-family-sans-serif: "Helvetica Neue", Arial, "Segoe UI", Roboto, sans-serif;
+$headings-font-family: $font-family-sans-serif;
+$headings-font-weight: 700;
+$headings-color: $navy;
+$font-size-base: 1.02rem;
+$line-height-base: 1.65;
+
+// Code
+$code-color: $navy;
+$code-bg: $ice-soft;
+
+// Navbar
+$navbar-bg: $navy;
+$navbar-fg: $white;
+
+/*-- scss:rules --*/
+// ============================================================
+
+// ---- Navbar ----
+.navbar {
+  background: linear-gradient(90deg, $navy-deep 0%, $navy 100%) !important;
+  border-bottom: 3px solid $amber;
+  box-shadow: 0 2px 12px rgba(30, 39, 97, 0.18);
+}
+.navbar-title, .navbar .navbar-brand {
+  color: $white !important;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.navbar .nav-link {
+  color: $ice !important;
+  font-weight: 600;
+  transition: color 0.15s ease;
+  &:hover { color: $amber !important; }
+}
+// "Open the Laboratory" call-to-action in the navbar
+.navbar .navbar-nav .nav-item:last-child .nav-link {
+  background: $amber;
+  color: $navy !important;
+  border-radius: 6px;
+  padding: 0.35rem 0.9rem !important;
+  margin-left: 0.5rem;
+  &:hover { background: lighten($amber, 6%); color: $navy-deep !important; }
+}
+
+// ---- Headings ----
+h1, .h1 {
+  color: $navy;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  border-bottom: 3px solid $amber;
+  padding-bottom: 0.35rem;
+  margin-bottom: 1.1rem;
+}
+h2, .h2 {
+  color: $navy;
+  font-weight: 700;
+  margin-top: 2.2rem;
+  padding-left: 0.6rem;
+  border-left: 4px solid $amber;
+}
+h3, .h3 { color: $dark; font-weight: 700; margin-top: 1.6rem; }
+
+// ---- Links ----
+a { text-decoration: none; font-weight: 500; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+// ---- Sidebar ----
+.sidebar-navigation .sidebar-item .sidebar-link {
+  color: $dark;
+  border-radius: 6px;
+  padding: 0.3rem 0.55rem;
+  &:hover { background: $ice-soft; color: $navy; }
+}
+.sidebar-navigation .sidebar-item .sidebar-link.active {
+  background: $navy;
+  color: $white !important;
+  font-weight: 600;
+}
+.sidebar-navigation .sidebar-item-section > .sidebar-item-container > .sidebar-link,
+.sidebar-title {
+  color: $navy;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.6px;
+}
+
+// ---- Tables ----
+table, .table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid $grey-line;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(30,39,97,0.05);
+}
+thead tr, .table thead tr {
+  background: $navy;
+}
+thead th, .table thead th {
+  color: $white !important;
+  font-weight: 700;
+  border: none !important;
+  padding: 0.7rem 0.9rem;
+}
+tbody td, .table tbody td { padding: 0.6rem 0.9rem; border-color: $grey-line !important; }
+tbody tr:nth-child(even) { background: $ice-soft; }
+
+// ---- Blockquotes / callouts ----
+blockquote {
+  border-left: 4px solid $amber;
+  background: $ice-soft;
+  padding: 0.8rem 1.1rem;
+  border-radius: 0 8px 8px 0;
+  color: $dark;
+}
+
+// ---- Code ----
+code { background: $ice-soft; padding: 0.1rem 0.35rem; border-radius: 4px; }
+pre {
+  background: $navy-deep;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  code { background: transparent; color: $ice; }
+}
+
+// ---- Footer ----
+.nav-footer {
+  background: $navy-deep;
+  color: $ice;
+  border-top: 3px solid $amber;
+  padding: 1.4rem 0;
+  a { color: $ice; &:hover { color: $amber; } }
+}
+
+// ---- Buttons ----
+.btn-primary {
+  background: $navy; border-color: $navy; font-weight: 600;
+  &:hover { background: $navy-deep; border-color: $navy-deep; }
+}

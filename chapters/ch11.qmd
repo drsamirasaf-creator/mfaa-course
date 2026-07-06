@@ -25,7 +25,7 @@ Private credit is priced by decomposing a quoted spread into what each basis poi
 
 ## Laboratory (book §11.9)
 
-**Module:** Private Credit Engine — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+**Module:** Private Credit Engine — [open in the Laboratory](https://mathematicalfinance.app)
 
 Price bilateral loans with all four layers live; the spread waterfall is the organizing display. **E1** decompose the 575 (the waterfall with bands, the sentence each block licenses in committee English); **E2** price cov-lite (covenant value by regime, verifying the three monotonicities); **E3** wrong-way stress (sweep the recovery–regime link, separating the P-effect from the priced effect); **E4** reconcile the committee (back out the P/Q wedge and convert it to a default-risk Sharpe contribution — the Chapter 7 audit applied to credit).
 

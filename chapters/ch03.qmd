@@ -25,7 +25,7 @@ The chapter turns three theorems into manipulable objects: the fundamental theor
 
 ## Laboratory (book §3.9)
 
-**Module:** State Prices and Pricing Bounds — [open in the Laboratory](https://YOUR-LOVABLE-APP-URL)
+**Module:** State Prices and Pricing Bounds — [open in the Laboratory](https://mathematicalfinance.app)
 
 Build a finite-state traded market; watch the risk-neutral set appear, shrink, and vanish as assets are edited; compute no-arbitrage bounds with hedging portfolios by linear programming. **E1** completeness as a knife edge; **E2** manufacture an arbitrage and read the Farkas certificate; **E3** the spanning curve (interval width vs spanned fraction); **E4** P versus Q (reconcile two desks as an SDF disagreement).
 
